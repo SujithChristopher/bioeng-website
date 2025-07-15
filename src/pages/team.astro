@@ -1,0 +1,544 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const faculty = [
+  {
+    name: "Sivakumar Balasubramanian",
+    title: "Professor",
+    education: [
+      "B.Tech in Electronics and Communication Engg., Pondicherry Engg. College",
+      "M.Tech in Biomedical Engineering, Indian Institute of Technology Bombay",
+      "Ph.D in Bioengineering, Arizona State University, Tempe"
+    ],
+    email: "siva82kb@cmcvellore.ac.in",
+    url: "http://siva82kb.github.io",
+    image: "/team-photos/siva.jpg"
+  }
+];
+
+const postdocs = [
+  {
+    name: "Ritwika Choudhuri",
+    title: "Post-doc",
+    education: [
+      "B.Tech in Instrumentation and Control Engineering, West Bengal University of Technology",
+      "M.Tech in Applied Electronics and Instrumentation Engineering, West Bengal University of Technology",
+      "Ph.D in Biomedical Engineering, Indian Institute of Technology, Bombay"
+    ],
+    email: "ritwika.choudhuri09@gmail.com",
+    url: "linkedin/Ritwika-Choudhuri",
+    image: "/team-photos/ritwika.jpg"
+  },
+  {
+    name: "Prem Kumar",
+    title: "Post-doc",
+    education: [
+      "B.E. in Mechanical Engineering, Government College of Engineering, Tirunelveli",
+      "M.Tech + PhD in Mechanical Engineering, IIT Madras"
+    ],
+    email: "premmathavan95@gmail.com",
+    image: "/team-photos/prem.jpg"
+  }
+];
+
+const phdStudents = [
+  {
+    name: "Monisha Yuvaraj",
+    title: "PhD Student",
+    coGuide: "Dr. Varadhan SKM (IIT Madras)",
+    education: [
+      "B.Tech in Electronics and Communication Engg., IIIT Kancheepuram",
+      "M.Tech in Signal Processing and Communication System Design, IIIT Kancheepuram"
+    ],
+    email: "am20d600@smail.iitm.ac.in",
+    url: "sites.google/Monisha-Yuvaraj",
+    image: "/team-photos/monisha.jpeg"
+  },
+  {
+    name: "Arjun Ram",
+    title: "PhD Student",
+    coGuide: "Dr. Varadhan SKM (IIT Madras)",
+    education: [
+      "B.Tech in Biomedical Engineering, Rajiv Gandhi College of Engineering and Technology, Pondicherry",
+      "M.E. in Biomedical Engineering, College of Engineering, Guindy, Anna University"
+    ],
+    email: "arjunram11697@gmail.com",
+    image: "/team-photos/arjun.jpg"
+  },
+  {
+    name: "Neelakshi Ganguly",
+    title: "PhD Student",
+    coGuide: "Dr. Sujatha Srinivasan (IIT Madras)",
+    education: [
+      "B.Tech in Electrical Engineering, St.Thomas College of Engineering and Technology, Kolkata",
+      "M.E. in Biomedical Engineering from Jadavpur University, Kolkata"
+    ],
+    email: "neelakshi5597@gmail.com",
+    image: "/team-photos/neelakshi.png"
+  },
+  {
+    name: "Parvathy Neelakandan",
+    title: "PhD Student",
+    coGuide: "Dr. Varadhan SKM (IIT Madras)",
+    education: [
+      "B.Tech in Information Technology, University of Kerala",
+      "M.Tech in Computer Science and Engineering, Amrita School of Engineering, Bangalore",
+      "M.Sc in Computational Neuroscience, Technical University, Berlin and Humboldt University, Berlin"
+    ],
+    email: "parvathyn8@gmail.com",
+    url: "linkedin/Parvathy-N",
+    image: "/team-photos/parvathy.png"
+  },
+  {
+    name: "Charles Jebaraj.I",
+    title: "PhD Student",
+    coGuide: "Dr. Varadhan SKM (IIT Madras)",
+    education: [
+      "B.Tech in Electronics and Communication, Mar Baselios College of Engineering and Technology, Trivandrum",
+      "M.S in Bioengineering, CMC Vellore"
+    ],
+    email: "charlesjeba.96@gmail.com",
+    url: "linkedin/Charles-Jebaraj",
+    image: "/team-photos/charles_j.jpg"
+  },
+  {
+    name: "Pooja Vinayagamoorthy",
+    title: "PhD Student",
+    coGuide: "Dr. Varadhan SKM (IIT Madras)",
+    education: [
+      "B.E in Biomedical Engineering, Sri Ramakrishna Engineering college, TN",
+      "M.E in Medical Electronics, College of Engineering Guindy, Anna University, TN"
+    ],
+    email: "am23d602@smail.iitm.ac.in",
+    image: "/team-photos/pooja.png"
+  }
+];
+
+const masterStudents = [
+  {
+    name: "Lavanya Varshini",
+    title: "MS Student",
+    education: [
+      "B.E. in Electronics and communication, Ranipettai engineering college, Anna University",
+      "M.Tech in Embedded Systems, VIT University, Vellore"
+    ],
+    email: "varshini2891@gmail.com",
+    image: "/team-photos/lavanya.jpg"
+  },
+  {
+    name: "Vaideesh Ragavan",
+    title: "MS Student",
+    education: ["B.E. in MEDICAL ELECTRONICS, Saveetha Engineering College, Chennai"],
+    email: "vaideeshragavan1021@gmail.com",
+    image: "/team-photos/vaideesh.jpg"
+  },
+  {
+    name: "Johanna Afreena I",
+    title: "MS Student",
+    education: ["B.E. in Electronics and Communication, KCG College of Technology, Chennai"],
+    email: "Johanna.afreena@gmail.com",
+    image: "/team-photos/johanna.jpg"
+  },
+  {
+    name: "Kabilan V",
+    title: "MS Student",
+    education: ["B.E. in MEDICAL ELECTRONICS, Saveetha Engineering College, Chennai"],
+    email: "kabilan.varadhan@gmail.com",
+    image: "/team-photos/kabilan.jpg"
+  },
+  {
+    name: "Minusha K",
+    title: "MS Student",
+    education: ["B.Tech in Biotechnology, Kamaraj College of Engineering and Technology, Madurai"],
+    email: "Kingsleyminusha@gmail.com",
+    image: "/team-photos/minusha.jpg"
+  }
+];
+
+const projectStaff = [
+  {
+    name: "Sriramachandran V",
+    title: "Junior Research Fellow",
+    education: [
+      "B.Tech in Mechanical Engineering, Ganadipathy Tulsi's Jain Engineering College, Vellore",
+      "M.S. in Bioengineering, Christian Medical College, Vellore"
+    ],
+    email: "sriramachandranv94@gmail.com",
+    image: "/team-photos/rama.JPG"
+  },
+  {
+    name: "Thiagu S",
+    title: "Project Associate",
+    education: ["B.E. in Mechanical Engineering, Government College of Engineering, Tirunelveli"],
+    email: "sthiashine@gmail.com",
+    image: "/team-photos/thiagu.jpg"
+  },
+  {
+    name: "Sujith Christopher",
+    title: "Project Associate",
+    education: [
+      "B.Tech in Electronics and Communication Engineering, Karunya University",
+      "M.S. in Bioengineering, Christian Medical College, Vellore"
+    ],
+    email: "Sujith.christopher52@gmail.com",
+    url: "https://sujithchristopher.github.io/",
+    image: "/team-photos/sujithc.jpg"
+  },
+  {
+    name: "Basinepalli Kothireddy Gari Diwakar Reddy",
+    title: "Senior Research Fellow",
+    education: [
+      "B.Tech in Electronics and Communication Engineering, NIT Calicut",
+      "M.S. in Bioengineering, Christian Medical College, Vellore"
+    ],
+    email: "bkdiwakar34@gmail.com",
+    url: "linkedin/Diwakar-Reddy",
+    image: "/team-photos/diwakar.jpg"
+  },
+  {
+    name: "Achu Vinod Thomas",
+    title: "Senior Research Fellow",
+    education: [
+      "B.Tech in Computer Science and Engineering, Mar Baselios College of Engineering and Technology, Trivandrum",
+      "M.Tech in Artificial Intelligence and Machine Learning, Vellore Institute of Technology, Vellore"
+    ],
+    email: "achu.vinod@cmcvellore.ac.in",
+    url: "linkedin/achu-vinod-thomas",
+    image: "/team-photos/achu.jpg"
+  },
+  {
+    name: "GNANAMOSES G",
+    title: "Senior Research Fellow/OT",
+    education: ["Bachelor in Occupational Therapy, Sri Ramachandra Institute of Higher Education and Research, Chennai"],
+    email: "mosesmaxs07@gmail.com",
+    url: "linkedin/Moses",
+    image: "/team-photos/moses.jpg"
+  },
+  {
+    name: "GOKUL RAJ E",
+    title: "Junior Research Fellow",
+    education: ["MCA in Thanthai Periyar Government Institute of Technology, Vellore"],
+    email: "gokulrajekambaram@gmail.com",
+    image: "/team-photos/gokul.jpg"
+  },
+  {
+    name: "JAYASURYA R",
+    title: "Junior Research Fellow",
+    education: ["MCA in Thanthai Periyar Government Institute of Technology, Vellore"],
+    email: "jaijaisurya777@gmail.com",
+    image: "/team-photos/Jayasurya.jpg"
+  }
+];
+---
+
+<Layout title="Team - BioRehab Group">
+  <div class="min-h-screen bg-white">
+    <Header />
+    
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Our Team
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Meet the dedicated researchers, engineers, and students working together 
+            to advance neurorehabilitation technology
+          </p>
+        </div>
+
+        <!-- Faculty -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Faculty</h2>
+          <div class="flex justify-center">
+            <div class="max-w-sm">
+              {faculty.map((member) => (
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                  <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      class="object-contain p-2 w-full h-full"
+                    />
+                  </div>
+                  <div class="p-4">
+                    <h3 class="font-semibold text-gray-900 mb-1 text-lg">{member.name}</h3>
+                    {member.title && <p class="text-blue-600 font-medium mb-2 text-base">{member.title}</p>}
+                    {member.education && (
+                      <div class="mb-3">
+                        <p class="text-sm font-medium text-gray-800 mb-1">Education:</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                          {member.education.map((edu) => (
+                            <li>• {edu}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    <div class="space-y-1">
+                      {member.email && (
+                        <a 
+                          href={`mailto:${member.email}`}
+                          class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                        >
+                          📧 {member.email}
+                        </a>
+                      )}
+                      {member.url && (
+                        <a 
+                          href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                        >
+                          🔗 {member.url}
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Post-Docs -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Post-Docs</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {postdocs.map((member) => (
+              <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    class="object-contain p-2 w-full h-full"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-gray-900 mb-1 text-lg">{member.name}</h3>
+                  {member.title && <p class="text-blue-600 font-medium mb-2 text-base">{member.title}</p>}
+                  {member.coGuide && <p class="text-sm text-gray-600 mb-2"><span class="font-medium">Co-guide:</span> {member.coGuide}</p>}
+                  {member.education && (
+                    <div class="mb-3">
+                      <p class="text-sm font-medium text-gray-800 mb-1">Education:</p>
+                      <ul class="text-sm text-gray-600 space-y-1">
+                        {member.education.map((edu) => (
+                          <li>• {edu}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div class="space-y-1">
+                    {member.email && (
+                      <a 
+                        href={`mailto:${member.email}`}
+                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                      >
+                        📧 {member.email}
+                      </a>
+                    )}
+                    {member.url && (
+                      <a 
+                        href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                      >
+                        🔗 {member.url}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- PhD Students -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">PhD Students</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {phdStudents.map((member) => (
+              <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    class="object-contain p-2 w-full h-full"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-gray-900 mb-1 text-lg">{member.name}</h3>
+                  {member.title && <p class="text-blue-600 font-medium mb-2 text-base">{member.title}</p>}
+                  {member.coGuide && <p class="text-sm text-gray-600 mb-2"><span class="font-medium">Co-guide:</span> {member.coGuide}</p>}
+                  {member.education && (
+                    <div class="mb-3">
+                      <p class="text-sm font-medium text-gray-800 mb-1">Education:</p>
+                      <ul class="text-sm text-gray-600 space-y-1">
+                        {member.education.map((edu) => (
+                          <li>• {edu}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div class="space-y-1">
+                    {member.email && (
+                      <a 
+                        href={`mailto:${member.email}`}
+                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                      >
+                        📧 {member.email}
+                      </a>
+                    )}
+                    {member.url && (
+                      <a 
+                        href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                      >
+                        🔗 {member.url}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Master Students -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Master Students</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {masterStudents.map((member) => (
+              <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    class="object-contain p-2 w-full h-full"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-gray-900 mb-1 text-lg">{member.name}</h3>
+                  {member.title && <p class="text-blue-600 font-medium mb-2 text-base">{member.title}</p>}
+                  {member.coGuide && <p class="text-sm text-gray-600 mb-2"><span class="font-medium">Co-guide:</span> {member.coGuide}</p>}
+                  {member.education && (
+                    <div class="mb-3">
+                      <p class="text-sm font-medium text-gray-800 mb-1">Education:</p>
+                      <ul class="text-sm text-gray-600 space-y-1">
+                        {member.education.map((edu) => (
+                          <li>• {edu}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div class="space-y-1">
+                    {member.email && (
+                      <a 
+                        href={`mailto:${member.email}`}
+                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                      >
+                        📧 {member.email}
+                      </a>
+                    )}
+                    {member.url && (
+                      <a 
+                        href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                      >
+                        🔗 {member.url}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Project Staff -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Project Staff</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projectStaff.map((member) => (
+              <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    class="object-contain p-2 w-full h-full"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-gray-900 mb-1 text-lg">{member.name}</h3>
+                  {member.title && <p class="text-blue-600 font-medium mb-2 text-base">{member.title}</p>}
+                  {member.coGuide && <p class="text-sm text-gray-600 mb-2"><span class="font-medium">Co-guide:</span> {member.coGuide}</p>}
+                  {member.education && (
+                    <div class="mb-3">
+                      <p class="text-sm font-medium text-gray-800 mb-1">Education:</p>
+                      <ul class="text-sm text-gray-600 space-y-1">
+                        {member.education.map((edu) => (
+                          <li>• {edu}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div class="space-y-1">
+                    {member.email && (
+                      <a 
+                        href={`mailto:${member.email}`}
+                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                      >
+                        📧 {member.email}
+                      </a>
+                    )}
+                    {member.url && (
+                      <a 
+                        href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                      >
+                        🔗 {member.url}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Join Us Section -->
+        <div class="bg-blue-600 text-white p-8 rounded-lg text-center">
+          <h2 class="text-2xl font-semibold mb-4">Join Our Team</h2>
+          <p class="text-lg mb-6">
+            We are always looking for motivated individuals to join our research community
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <h3 class="font-semibold mb-2">MS/PhD Students</h3>
+              <p class="text-blue-100">Research opportunities available</p>
+            </div>
+            <div class="text-center">
+              <h3 class="font-semibold mb-2">Internships</h3>
+              <p class="text-blue-100">Hands-on research experience</p>
+            </div>
+            <div class="text-center">
+              <h3 class="font-semibold mb-2">Project Staff</h3>
+              <p class="text-blue-100">Full-time research positions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</Layout>

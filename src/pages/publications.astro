@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const journalPublications = [
+  {
+    title: "GMAC – A simple measure to quantify upper limb use from wrist-worn accelerometers",
+    journal: "IEEE TNSRE",
+    year: "2024",
+    type: "Journal"
+  },
+  {
+    title: "Romiumeter: An Open-Source Inertial Measurement Unit-Based Goniometer",
+    journal: "Preprint",
+    year: "2024",
+    type: "Preprint"
+  },
+  {
+    title: "A systematic investigation of detectors for low signal-to-noise ratio EMG signals",
+    journal: "F1000Research",
+    year: "2023",
+    type: "Journal"
+  },
+  {
+    title: "The Facilitators and Barriers to Home-based Robotic Rehabilitation in India",
+    journal: "Frontiers in Stroke",
+    year: "2023",
+    type: "Journal"
+  },
+  {
+    title: "Design and Characterization of a Self-Aligning End-Effector Robot",
+    journal: "Robotics",
+    year: "2023",
+    type: "Journal"
+  },
+  {
+    title: "Comparing algorithms for assessing upper limb use",
+    journal: "Frontiers in Physiology",
+    year: "2022",
+    type: "Journal"
+  },
+  {
+    title: "Encoder-Controlled Functional Electrical Stimulator",
+    journal: "Bioengineering",
+    year: "2022",
+    type: "Journal"
+  },
+  {
+    title: "Plug-and-Train Robot (PLUTO) for Hand Rehabilitation",
+    journal: "IEEE Access",
+    year: "2021",
+    type: "Journal"
+  },
+  {
+    title: "A Framework for Sensor-Based Assessment of Upper-Limb Functioning",
+    journal: "Frontiers in Human Neuroscience",
+    year: "2021",
+    type: "Journal"
+  }
+];
+
+const conferencePublications = [
+  {
+    title: "A Plug-and-Train Robotic Kit (PLUTO) For Hand Rehabilitation",
+    journal: "BioRob",
+    year: "2020",
+    type: "Conference"
+  },
+  {
+    title: "A Smartphone-based gaming system for vestibular rehabilitation",
+    journal: "Conference",
+    year: "2019",
+    type: "Conference"
+  }
+];
+---
+
+<Layout title="Publications - BioRehab Group">
+  <div class="min-h-screen bg-white">
+    <Header />
+    
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Publications
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Our research contributions to the field of neurorehabilitation, 
+            rehabilitation robotics, and bioengineering
+          </p>
+        </div>
+
+        <!-- Statistics -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-blue-50 p-6 rounded-lg text-center">
+            <div class="text-3xl font-bold text-blue-600 mb-2">
+              {journalPublications.length}
+            </div>
+            <div class="text-gray-700 font-medium">Journal Publications</div>
+          </div>
+          <div class="bg-green-50 p-6 rounded-lg text-center">
+            <div class="text-3xl font-bold text-green-600 mb-2">
+              {conferencePublications.length}
+            </div>
+            <div class="text-gray-700 font-medium">Conference Papers</div>
+          </div>
+          <div class="bg-purple-50 p-6 rounded-lg text-center">
+            <div class="text-3xl font-bold text-purple-600 mb-2">
+              2018-2024
+            </div>
+            <div class="text-gray-700 font-medium">Publication Years</div>
+          </div>
+        </div>
+
+        <!-- Journal Publications -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Journal Publications</h2>
+          <div class="grid grid-cols-1 gap-6">
+            {journalPublications.map((publication) => (
+              <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-500">
+                <div class="flex justify-between items-start mb-3">
+                  <span class={`px-3 py-1 rounded-full text-sm font-medium ${
+                    publication.type === 'Journal' ? 'bg-blue-100 text-blue-800' :
+                    publication.type === 'Conference' ? 'bg-green-100 text-green-800' :
+                    'bg-gray-100 text-gray-800'
+                  }`}>
+                    {publication.type}
+                  </span>
+                  <span class="text-sm font-medium text-gray-500">{publication.year}</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-tight">
+                  {publication.title}
+                </h3>
+                <p class="text-gray-600 font-medium">{publication.journal}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Conference Publications -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Conference Publications</h2>
+          <div class="grid grid-cols-1 gap-6">
+            {conferencePublications.map((publication) => (
+              <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-500">
+                <div class="flex justify-between items-start mb-3">
+                  <span class={`px-3 py-1 rounded-full text-sm font-medium ${
+                    publication.type === 'Journal' ? 'bg-blue-100 text-blue-800' :
+                    publication.type === 'Conference' ? 'bg-green-100 text-green-800' :
+                    'bg-gray-100 text-gray-800'
+                  }`}>
+                    {publication.type}
+                  </span>
+                  <span class="text-sm font-medium text-gray-500">{publication.year}</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-tight">
+                  {publication.title}
+                </h3>
+                <p class="text-gray-600 font-medium">{publication.journal}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Research Focus Areas -->
+        <div class="bg-gray-50 p-8 rounded-lg">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-6 text-center">
+            Research Focus Areas
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded-lg text-center">
+              <h3 class="font-semibold text-gray-800 mb-2">Rehabilitation Technologies</h3>
+              <p class="text-sm text-gray-600">Robotic systems and sensor-based tools</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center">
+              <h3 class="font-semibold text-gray-800 mb-2">Movement Analysis</h3>
+              <p class="text-sm text-gray-600">Quantitative assessment methods</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center">
+              <h3 class="font-semibold text-gray-800 mb-2">Signal Processing</h3>
+              <p class="text-sm text-gray-600">EMG and sensor data analysis</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center">
+              <h3 class="font-semibold text-gray-800 mb-2">Bioengineering</h3>
+              <p class="text-sm text-gray-600">Medical device development</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center">
+              <h3 class="font-semibold text-gray-800 mb-2">Neurorehabilitation</h3>
+              <p class="text-sm text-gray-600">Clinical applications and therapy</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg text-center">
+              <h3 class="font-semibold text-gray-800 mb-2">Open Science</h3>
+              <p class="text-sm text-gray-600">Open-source tools and frameworks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</Layout>

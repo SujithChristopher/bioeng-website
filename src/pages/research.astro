@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Research - BioRehab Group">
+  <div class="min-h-screen bg-white">
+    <Header />
+    
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Research
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Develop and translate state-of-the-art tools and methods for neurorehabilitation
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div class="bg-blue-50 p-8 rounded-lg">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+              🤖 Robotics for Neurorehabilitation
+            </h2>
+            <div class="space-y-4">
+              <div class="bg-white p-4 rounded-lg">
+                <h3 class="font-semibold text-gray-800 mb-2">PLUTO</h3>
+                <p class="text-gray-600">Modular single degree-of-freedom hand training robot</p>
+              </div>
+              <div class="bg-white p-4 rounded-lg">
+                <h3 class="font-semibold text-gray-800 mb-2">AREBO</h3>
+                <p class="text-gray-600">6 DOF arm rehabilitation robot</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-green-50 p-8 rounded-lg">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+              📊 Sensor-based Systems
+            </h2>
+            <div class="space-y-4">
+              <div class="bg-white p-4 rounded-lg">
+                <h3 class="font-semibold text-gray-800 mb-2">SITAR</h3>
+                <p class="text-gray-600">Interactive table-top system for upper-limb training</p>
+              </div>
+              <div class="bg-white p-4 rounded-lg">
+                <h3 class="font-semibold text-gray-800 mb-2">Learning Vision System</h3>
+                <p class="text-gray-600">Computer vision tracking human movement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div class="bg-purple-50 p-8 rounded-lg">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+              📈 Quantitative Movement Assessment
+            </h2>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-purple-600 mr-2">•</span>
+                Smoothness analysis of movement
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-600 mr-2">•</span>
+                Arm-use assessment using wearable IMU "watches"
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-600 mr-2">•</span>
+                GMAC - Measure to quantify upper limb use
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-orange-50 p-8 rounded-lg">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+              🧠 Neurorehabilitation Science
+            </h2>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-orange-600 mr-2">•</span>
+                Constraint Induced Movement Therapy (CIMT) vs Reinforcement Induced Movement Therapy (RIMT)
+              </li>
+              <li class="flex items-start">
+                <span class="text-orange-600 mr-2">•</span>
+                "BCI without BCI" - Using EMG for movement intention detection
+              </li>
+              <li class="flex items-start">
+                <span class="text-orange-600 mr-2">•</span>
+                Neuromechanics research and applications
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-lg mb-16">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-6 text-center">
+            Key Collaborators
+          </h2>
+          <div class="text-center">
+            <div class="bg-white p-6 rounded-lg inline-block">
+              <h3 class="font-semibold text-gray-800 mb-2">Dr. Sujatha Srinivasan</h3>
+              <p class="text-gray-600">IIT Madras</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-blue-600 text-white p-8 rounded-lg text-center">
+          <h2 class="text-2xl font-semibold mb-4">Funding & Support</h2>
+          <p class="text-lg mb-6">
+            Our research is supported by leading institutions and government agencies
+          </p>
+          <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+            <div class="text-center">
+              <div class="font-semibold">Department of Biotechnology</div>
+              <div class="text-blue-200">Government of India</div>
+            </div>
+            <div class="text-center">
+              <div class="font-semibold">NHHID</div>
+              <div class="text-blue-200">Department of Science and Technology</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</Layout>

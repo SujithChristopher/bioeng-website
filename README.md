@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Department of Bioengineering Website
 
-## Getting Started
+A modern, responsive website for the Department of Bioengineering at Christian Medical College Vellore.
 
-First, run the development server:
+## 🚀 Built with Astro
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This website is built using [Astro](https://astro.build), a modern static site generator that delivers fast, SEO-friendly websites with minimal JavaScript.
+
+## 📱 Features
+
+- **Responsive Design**: Optimized for both desktop and mobile devices
+- **Fast Performance**: Static generation for optimal loading speeds
+- **SEO Optimized**: Built-in SEO features and meta tags
+- **Modern Design**: Clean, professional layout with Tailwind CSS
+- **Accessible**: Keyboard navigation and screen reader friendly
+- **Interactive Elements**: News carousel and mobile navigation
+
+## 🛠️ Tech Stack
+
+- **Framework**: Astro 4.16.18
+- **Styling**: Tailwind CSS
+- **Fonts**: Google Fonts (Geist Sans & Geist Mono)
+- **Icons**: Heroicons (SVG)
+- **Images**: Optimized PNG/JPG assets
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`     |
+| `npm run build`           | Build your production site to `./dist/`         |
+| `npm run preview`         | Preview your build locally, before deploying    |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                    |
+
+## 📂 Project Structure
+
+```
+/
+├── public/
+│   ├── team-photos/        # Team member photos
+│   ├── pluto_news1.png     # News images
+│   ├── pluto_news2.png
+│   ├── pluto_news3.png
+│   ├── work.png           # Hero illustration
+│   └── favicon.svg        # Site favicon
+├── src/
+│   ├── components/        # Reusable Astro components
+│   │   ├── Header.astro
+│   │   ├── Hero.astro
+│   │   ├── News.astro
+│   │   ├── About.astro
+│   │   ├── Research.astro
+│   │   └── Footer.astro
+│   ├── layouts/
+│   │   └── Layout.astro   # Main layout template
+│   ├── pages/             # File-based routing
+│   │   ├── index.astro    # Home page
+│   │   ├── research.astro
+│   │   ├── publications.astro
+│   │   ├── team.astro
+│   │   ├── collaborations.astro
+│   │   ├── open-science.astro
+│   │   └── join-us.astro
+│   ├── styles.css         # Global styles
+│   └── env.d.ts          # TypeScript environment
+├── astro.config.mjs       # Astro configuration
+├── tailwind.config.mjs    # Tailwind CSS configuration
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Mobile-First**: Responsive design that works on all screen sizes
+- **Accessibility**: WCAG compliant with proper focus management
+- **Performance**: Optimized images and minimal JavaScript
+- **Modern UI**: Clean design with proper spacing and typography
+- **Interactive**: Smooth animations and hover effects
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Development
 
-## Learn More
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start development server: `npm run dev`
+4. Open `http://localhost:4321` in your browser
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The website is built as a static site and can be deployed to any static hosting service:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Build the site: `npm run build`
+2. Deploy the `dist/` folder to your hosting provider
 
-## Deploy on Vercel
+## 📧 Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For questions about the website or research, contact:
+- Email: biorehab@cmcvellore.ac.in
+- Phone: +91-416-228-4267
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+
+© 2024 BioRehab Group, Department of Bioengineering, Christian Medical College Vellore. All rights reserved.
