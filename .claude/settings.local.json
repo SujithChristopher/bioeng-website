@@ -7,7 +7,9 @@
       "Bash(npm run build:*)",
       "Bash(npm cache clean:*)",
       "Bash(rm:*)",
-      "Bash(npm run lint)"
+      "Bash(npm run lint)",
+      "WebFetch(domain:clever-duckanoo-2dfe63.netlify.app)",
+      "WebFetch(domain:biorehab.github.io)"
     ],
     "deny": []
   }
