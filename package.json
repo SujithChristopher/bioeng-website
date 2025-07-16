@@ -9,6 +9,7 @@
     "lint": "astro check"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^5.1.1",
     "astro": "^5.11.1",
     "tailwindcss": "^3.4.16",
@@ -16,6 +17,6 @@
   },
   "devDependencies": {
     "@types/node": "^20",
-    "typescript": "^5"
+    "typescript": "^5.8.3"
   }
 }
