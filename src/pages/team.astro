@@ -268,9 +268,8 @@ const projectStaff = [
         <!-- Faculty -->
         <div class="mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Faculty</h2>
-          <div class="flex justify-center">
-            <div class="max-w-sm">
-              {faculty.map((member) => (
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {faculty.map((member) => (
                 <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                   <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
                     <img
@@ -315,7 +314,6 @@ const projectStaff = [
                   </div>
                 </div>
               ))}
-            </div>
           </div>
         </div>
 
