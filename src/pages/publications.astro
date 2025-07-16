@@ -6,72 +6,105 @@ import Footer from '../components/Footer.astro';
 const journalPublications = [
   {
     title: "GMAC – A simple measure to quantify upper limb use from wrist-worn accelerometers",
+    authors: "Sivakumar Balasubramanian",
     journal: "IEEE TNSRE",
     year: "2024",
-    type: "Journal"
+    type: "Journal",
+    link: "https://ieeexplore.ieee.org/document/10569004",
+    doi: "10.1109/TNSRE.2024.3417964"
   },
   {
     title: "Romiumeter: An Open-Source Inertial Measurement Unit-Based Goniometer",
-    journal: "Preprint",
+    authors: "Diwakar Basinepalli Reddy, et al.",
+    journal: "bioRxiv Preprint",
     year: "2024",
-    type: "Preprint"
+    type: "Preprint",
+    link: "https://www.biorxiv.org/content/10.1101/2024.05.29.596353v1",
+    doi: "10.1101/2024.05.29.596353"
   },
   {
     title: "A systematic investigation of detectors for low signal-to-noise ratio EMG signals",
+    authors: "Monisha Yuvaraj, et al.",
     journal: "F1000Research",
     year: "2023",
-    type: "Journal"
+    type: "Journal",
+    link: "https://f1000research.com/articles/12-429",
+    doi: "10.12688/f1000research.131063.1"
   },
   {
     title: "The Facilitators and Barriers to Home-based Robotic Rehabilitation in India",
+    authors: "Nehrujee A, et al.",
     journal: "Frontiers in Stroke",
     year: "2023",
-    type: "Journal"
+    type: "Journal",
+    link: "https://www.frontiersin.org/articles/10.3389/fstro.2023.1265702/abstract",
+    doi: "10.3389/fstro.2023.1265702"
   },
   {
     title: "Design and Characterization of a Self-Aligning End-Effector Robot",
+    authors: "Sivakumar Balasubramanian, et al.",
     journal: "Robotics",
     year: "2023",
-    type: "Journal"
+    type: "Journal",
+    link: "",
+    doi: ""
   },
   {
     title: "Comparing algorithms for assessing upper limb use",
+    authors: "Sivakumar Balasubramanian, et al.",
     journal: "Frontiers in Physiology",
     year: "2022",
-    type: "Journal"
+    type: "Journal",
+    link: "",
+    doi: ""
   },
   {
     title: "Encoder-Controlled Functional Electrical Stimulator",
+    authors: "Sivakumar Balasubramanian, et al.",
     journal: "Bioengineering",
     year: "2022",
-    type: "Journal"
+    type: "Journal",
+    link: "",
+    doi: ""
   },
   {
     title: "Plug-and-Train Robot (PLUTO) for Hand Rehabilitation",
+    authors: "A Nehrujee, et al.",
     journal: "IEEE Access",
     year: "2021",
-    type: "Journal"
+    type: "Journal",
+    link: "",
+    doi: ""
   },
   {
     title: "A Framework for Sensor-Based Assessment of Upper-Limb Functioning",
+    authors: "Sivakumar Balasubramanian, et al.",
     journal: "Frontiers in Human Neuroscience",
     year: "2021",
-    type: "Journal"
+    type: "Journal",
+    link: "",
+    doi: ""
   }
 ];
 
 const conferencePublications = [
   {
     title: "A Plug-and-Train Robotic Kit (PLUTO) For Hand Rehabilitation",
+    authors: "A Nehrujee, et al.",
     journal: "BioRob",
     year: "2020",
-    type: "Conference"
+    type: "Conference",
+    link: "https://ieeexplore.ieee.org/abstract/document/9224369",
+    doi: "10.1109/BioRob49111.2020.9224369"
   },
   {
     title: "A Smartphone-based gaming system for vestibular rehabilitation",
+    authors: "Sivakumar Balasubramanian, et al.",
     journal: "Conference",
     year: "2019",
-    type: "Conference"
+    type: "Conference",
+    link: "",
+    doi: ""
   }
 ];
 ---
@@ -112,7 +145,34 @@ const conferencePublications = [
                 <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-tight">
                   {publication.title}
                 </h3>
-                <p class="text-gray-600 font-medium">{publication.journal}</p>
+                <p class="text-gray-600 font-medium mb-2">{publication.journal}</p>
+                {publication.authors && (
+                  <p class="text-sm text-gray-500 mb-3">
+                    <span class="font-medium">Authors:</span> {publication.authors}
+                  </p>
+                )}
+                <div class="flex gap-2 flex-wrap">
+                  {publication.link && (
+                    <a
+                      href={publication.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center px-3 py-1 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 transition-colors"
+                    >
+                      📄 Read Paper
+                    </a>
+                  )}
+                  {publication.doi && (
+                    <a
+                      href={`https://doi.org/${publication.doi}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center px-3 py-1 bg-green-600 text-white text-sm rounded-md hover:bg-green-700 transition-colors"
+                    >
+                      🔗 DOI
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -123,7 +183,7 @@ const conferencePublications = [
           <h2 class="text-3xl font-bold text-gray-900 mb-8">Conference Publications</h2>
           <div class="grid grid-cols-1 gap-6">
             {conferencePublications.map((publication) => (
-              <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-500">
+              <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
                 <div class="flex justify-between items-start mb-3">
                   <span class={`px-3 py-1 rounded-full text-sm font-medium ${
                     publication.type === 'Journal' ? 'bg-blue-100 text-blue-800' :
@@ -137,9 +197,36 @@ const conferencePublications = [
                 <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-tight">
                   {publication.title}
                 </h3>
-                <p class="text-gray-600 font-medium">{publication.journal}</p>
+                <p class="text-gray-600 font-medium mb-2">{publication.journal}</p>
+                {publication.authors && (
+                  <p class="text-sm text-gray-500 mb-3">
+                    <span class="font-medium">Authors:</span> {publication.authors}
+                  </p>
+                )}
+                <div class="flex gap-2 flex-wrap">
+                  {publication.link && (
+                    <a
+                      href={publication.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center px-3 py-1 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 transition-colors"
+                    >
+                      📄 Read Paper
+                    </a>
+                  )}
+                  {publication.doi && (
+                    <a
+                      href={`https://doi.org/${publication.doi}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center px-3 py-1 bg-green-600 text-white text-sm rounded-md hover:bg-green-700 transition-colors"
+                    >
+                      🔗 DOI
+                    </a>
+                  )}
+                </div>
               </div>
-            ))}
+            ))}}
           </div>
         </div>
 
