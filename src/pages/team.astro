@@ -262,7 +262,7 @@ const projectStaff = [
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 class="text-4xl md:text-5xl font-bold text-navy-800 mb-4 font-serif">
             Our Team
           </h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -273,10 +273,10 @@ const projectStaff = [
 
         <!-- Faculty -->
         <div class="mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Faculty</h2>
+          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-6 text-center">Faculty</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {faculty.map((member) => (
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden">
                   <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
                     <img
                       src={member.image}
@@ -285,8 +285,8 @@ const projectStaff = [
                     />
                   </div>
                   <div class="p-4">
-                    <h3 class="font-semibold text-gray-900 mb-1 text-lg">{member.name}</h3>
-                    {member.title && <p class="text-blue-600 font-medium mb-2 text-base">{member.title}</p>}
+                    <h3 class="font-semibold text-navy-800 mb-1 text-lg font-serif">{member.name}</h3>
+                    {member.title && <p class="text-navy-600 font-medium mb-2 text-base">{member.title}</p>}
                     {member.education && (
                       <div class="mb-3">
                         <p class="text-sm font-medium text-gray-800 mb-1">Education:</p>
@@ -301,9 +301,9 @@ const projectStaff = [
                       {member.email && (
                         <a 
                           href={`mailto:${member.email}`}
-                          class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                          class="text-sm text-navy-600 hover:text-navy-800 block break-all"
                         >
-                          📧 {member.email}
+                          {member.email}
                         </a>
                       )}
                       {member.url && (
@@ -311,9 +311,9 @@ const projectStaff = [
                           href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                          class="text-sm text-navy-600 hover:text-navy-800 block break-all"
                         >
-                          🔗 {member.url}
+                          {member.url}
                         </a>
                       )}
                     </div>
@@ -325,10 +325,10 @@ const projectStaff = [
 
         <!-- Post-Docs -->
         <div class="mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Post-Docs</h2>
+          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-6 text-center">Post-Docs</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {postdocs.map((member) => (
-              <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="bg-white border border-gray-200 rounded-sm overflow-hidden">
                 <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
                   <img
                     src={member.image}
@@ -337,8 +337,8 @@ const projectStaff = [
                   />
                 </div>
                 <div class="p-4">
-                  <h3 class="font-semibold text-gray-900 mb-1 text-lg">{member.name}</h3>
-                  {member.title && <p class="text-blue-600 font-medium mb-2 text-base">{member.title}</p>}
+                  <h3 class="font-semibold text-navy-800 mb-1 text-lg font-serif">{member.name}</h3>
+                  {member.title && <p class="text-navy-600 font-medium mb-2 text-base">{member.title}</p>}
                   {member.coGuide && <p class="text-sm text-gray-600 mb-2"><span class="font-medium">Co-guide:</span> {member.coGuide}</p>}
                   {member.education && (
                     <div class="mb-3">
@@ -354,7 +354,7 @@ const projectStaff = [
                     {member.email && (
                       <a 
                         href={`mailto:${member.email}`}
-                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                        class="text-sm text-navy-600 hover:text-navy-800 block break-all"
                       >
                         📧 {member.email}
                       </a>
@@ -364,7 +364,7 @@ const projectStaff = [
                         href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                        class="text-sm text-navy-600 hover:text-navy-800 block break-all"
                       >
                         🔗 {member.url}
                       </a>
@@ -378,10 +378,10 @@ const projectStaff = [
 
         <!-- PhD Students -->
         <div class="mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">PhD Students</h2>
+          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-6 text-center">PhD Students</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {phdStudents.map((member) => (
-              <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="bg-white border border-gray-200 rounded-sm overflow-hidden">
                 <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
                   <img
                     src={member.image}
@@ -390,8 +390,8 @@ const projectStaff = [
                   />
                 </div>
                 <div class="p-4">
-                  <h3 class="font-semibold text-gray-900 mb-1 text-lg">{member.name}</h3>
-                  {member.title && <p class="text-blue-600 font-medium mb-2 text-base">{member.title}</p>}
+                  <h3 class="font-semibold text-navy-800 mb-1 text-lg font-serif">{member.name}</h3>
+                  {member.title && <p class="text-navy-600 font-medium mb-2 text-base">{member.title}</p>}
                   {member.coGuide && <p class="text-sm text-gray-600 mb-2"><span class="font-medium">Co-guide:</span> {member.coGuide}</p>}
                   {member.education && (
                     <div class="mb-3">
@@ -407,7 +407,7 @@ const projectStaff = [
                     {member.email && (
                       <a 
                         href={`mailto:${member.email}`}
-                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                        class="text-sm text-navy-600 hover:text-navy-800 block break-all"
                       >
                         📧 {member.email}
                       </a>
@@ -417,7 +417,7 @@ const projectStaff = [
                         href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                        class="text-sm text-navy-600 hover:text-navy-800 block break-all"
                       >
                         🔗 {member.url}
                       </a>
@@ -431,10 +431,10 @@ const projectStaff = [
 
         <!-- Master Students -->
         <div class="mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Master Students</h2>
+          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-6 text-center">Master Students</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {masterStudents.map((member) => (
-              <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="bg-white border border-gray-200 rounded-sm overflow-hidden">
                 <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
                   <img
                     src={member.image}
@@ -443,8 +443,8 @@ const projectStaff = [
                   />
                 </div>
                 <div class="p-4">
-                  <h3 class="font-semibold text-gray-900 mb-1 text-lg">{member.name}</h3>
-                  {member.title && <p class="text-blue-600 font-medium mb-2 text-base">{member.title}</p>}
+                  <h3 class="font-semibold text-navy-800 mb-1 text-lg font-serif">{member.name}</h3>
+                  {member.title && <p class="text-navy-600 font-medium mb-2 text-base">{member.title}</p>}
                   {member.coGuide && <p class="text-sm text-gray-600 mb-2"><span class="font-medium">Co-guide:</span> {member.coGuide}</p>}
                   {member.education && (
                     <div class="mb-3">
@@ -460,7 +460,7 @@ const projectStaff = [
                     {member.email && (
                       <a 
                         href={`mailto:${member.email}`}
-                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                        class="text-sm text-navy-600 hover:text-navy-800 block break-all"
                       >
                         📧 {member.email}
                       </a>
@@ -470,7 +470,7 @@ const projectStaff = [
                         href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                        class="text-sm text-navy-600 hover:text-navy-800 block break-all"
                       >
                         🔗 {member.url}
                       </a>
@@ -484,10 +484,10 @@ const projectStaff = [
 
         <!-- Project Staff -->
         <div class="mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Project Staff</h2>
+          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-6 text-center">Project Staff</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectStaff.map((member) => (
-              <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="bg-white border border-gray-200 rounded-sm overflow-hidden">
                 <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
                   <img
                     src={member.image}
@@ -496,8 +496,8 @@ const projectStaff = [
                   />
                 </div>
                 <div class="p-4">
-                  <h3 class="font-semibold text-gray-900 mb-1 text-lg">{member.name}</h3>
-                  {member.title && <p class="text-blue-600 font-medium mb-2 text-base">{member.title}</p>}
+                  <h3 class="font-semibold text-navy-800 mb-1 text-lg font-serif">{member.name}</h3>
+                  {member.title && <p class="text-navy-600 font-medium mb-2 text-base">{member.title}</p>}
                   {member.coGuide && <p class="text-sm text-gray-600 mb-2"><span class="font-medium">Co-guide:</span> {member.coGuide}</p>}
                   {member.education && (
                     <div class="mb-3">
@@ -513,7 +513,7 @@ const projectStaff = [
                     {member.email && (
                       <a 
                         href={`mailto:${member.email}`}
-                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                        class="text-sm text-navy-600 hover:text-navy-800 block break-all"
                       >
                         📧 {member.email}
                       </a>
@@ -523,7 +523,7 @@ const projectStaff = [
                         href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-sm text-blue-600 hover:text-blue-800 block break-all"
+                        class="text-sm text-navy-600 hover:text-navy-800 block break-all"
                       >
                         🔗 {member.url}
                       </a>
@@ -536,23 +536,23 @@ const projectStaff = [
         </div>
 
         <!-- Join Us Section -->
-        <div class="bg-blue-600 text-white p-8 rounded-lg text-center">
-          <h2 class="text-2xl font-semibold mb-4">Join Our Team</h2>
-          <p class="text-lg mb-6">
+        <div class="bg-navy-900 text-white p-8 rounded text-center">
+          <h2 class="text-2xl font-semibold mb-4 font-serif">Join Our Team</h2>
+          <p class="text-lg mb-6 text-gray-300">
             We are always looking for motivated individuals to join our research community
           </p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="text-center">
-              <h3 class="font-semibold mb-2">MS/PhD Students</h3>
-              <p class="text-blue-100">Research opportunities available</p>
+              <h3 class="font-semibold mb-2 font-serif">MS/PhD Students</h3>
+              <p class="text-gray-400">Research opportunities available</p>
             </div>
             <div class="text-center">
-              <h3 class="font-semibold mb-2">Internships</h3>
-              <p class="text-blue-100">Hands-on research experience</p>
+              <h3 class="font-semibold mb-2 font-serif">Internships</h3>
+              <p class="text-gray-400">Hands-on research experience</p>
             </div>
             <div class="text-center">
-              <h3 class="font-semibold mb-2">Project Staff</h3>
-              <p class="text-blue-100">Full-time research positions</p>
+              <h3 class="font-semibold mb-2 font-serif">Project Staff</h3>
+              <p class="text-gray-400">Full-time research positions</p>
             </div>
           </div>
         </div>

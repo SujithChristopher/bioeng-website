@@ -9,15 +9,11 @@ This is a static website for the Department of Bioengineering at Christian Medic
 ## Essential Commands
 
 ```bash
-# Development
 npm install          # Install dependencies
 npm run dev          # Start development server (localhost:4321)
 npm run build        # Build production site to ./dist/
-npm run preview      # Preview build locally
+npm start            # Preview built site locally (astro preview)
 npm run lint         # Run Astro check for TypeScript errors
-
-# Build requirements
-npm run build        # MUST run before deployment
 ```
 
 ## Architecture Overview
@@ -39,13 +35,7 @@ Pages are automatically routed based on files in `src/pages/`:
 - `join-us.astro` → Recruitment information
 
 ### Component Architecture
-All components are in `src/components/` and are Astro components (`.astro` files):
-- **Header.astro**: Navigation with mobile menu toggle
-- **Hero.astro**: Homepage hero section
-- **About.astro**: Department overview
-- **Research.astro**: Research areas showcase
-- **News.astro**: News carousel with JavaScript
-- **Footer.astro**: Contact and social links
+All components are in `src/components/` and are Astro components (`.astro` files). Most page-specific content (team members, publications, news items, collaborations) lives as inline JavaScript arrays at the top of the relevant page file — there is no separate data layer or CMS. Components handle reusable UI structure (Header, Footer, Hero, About, Research, News).
 
 ### Data Structure Patterns
 Content is embedded as JavaScript arrays/objects within page components:
