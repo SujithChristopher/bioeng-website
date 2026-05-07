@@ -5,19 +5,25 @@ const newsItems = [
     id: 1,
     title: "PLUTO - Wearable Gait Analysis System",
     description: "Our research team has developed PLUTO, an innovative wearable gait analysis system that provides real-time biomechanical feedback for rehabilitation applications.",
-    image: "/pluto_news1.png"
+    image: "/news/pluto_news1.png"
   },
   {
     id: 2,
     title: "Research Day 2024",
     description: "BioRehab Group participated in the annual research day, showcasing our latest developments in neurorehabilitation technologies and collaborative research initiatives.",
-    image: "/pluto_news2.png"
+    image: "/news/pluto_news2.png"
   },
   {
     id: 3,
     title: "R2 Robotic Rehabilitation System",
     description: "Introduction of our new R2 robotic system designed for upper limb rehabilitation, featuring advanced control algorithms and adaptive therapy protocols.",
-    image: "/pluto_news3.png"
+    image: "/news/pluto_news3.png"
+  },
+  {
+    id: 4,
+    title: "NOARK: Not Just an Arm Skateboard",
+    description: "Introducing NOARK — a portable, gamified arm skateboard designed for upper-limb rehabilitation, making therapy engaging and accessible for patients.",
+    image: "/news/noark_news.jpg"
   }
 ];
 ---
@@ -84,7 +90,7 @@ const newsItems = [
 
 <script>
   let currentSlide = 0;
-  const totalSlides = 3;
+  const totalSlides = document.querySelectorAll('#news-slides > div').length;
   const slidesContainer = document.getElementById('news-slides');
   const dots = document.querySelectorAll('.dot');
 
