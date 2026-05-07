@@ -1,6 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-navy-50: #f0f5fb;
+  --color-navy-100: #dce8f5;
+  --color-navy-600: #2563a8;
+  --color-navy-700: #1e4976;
+  --color-navy-800: #1a3a5c;
+  --color-navy-900: #0f2645;
+  --color-gold-500: #b8941f;
+  --font-family-serif: 'Playfair Display', Georgia, serif;
+  --font-family-sans: Inter, system-ui, sans-serif;
+}
 
 :root {
   --background: #ffffff;
@@ -95,11 +105,6 @@ select:focus {
   outline-offset: 2px;
 }
 
-/* Better image responsive behavior */
-img {
-  max-width: 100%;
-  height: auto;
-}
 
 /* Smooth scrolling */
 html {

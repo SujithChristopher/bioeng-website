@@ -129,7 +129,7 @@ const phdStudents = [
   }
 ];
 
-const masterStudents = [
+const masterStudents2ndYear = [
   {
     name: "Lavanya Varshini",
     title: "MS Student",
@@ -167,6 +167,32 @@ const masterStudents = [
     education: ["B.Tech in Biotechnology, Kamaraj College of Engineering and Technology, Madurai"],
     email: "Kingsleyminusha@gmail.com",
     image: "/team-photos/minusha.jpg"
+  }
+];
+
+const masterStudents1stYear = [
+  {
+    name: "Adarsh Moses",
+    title: "MS Student",
+    education: ["B.Tech in Biotechnology, Karunya Institute of Technology and Sciences, Coimbatore"],
+    email: "adarshmoses2018@gmail.com",
+    url: "https://linkedin.com/in/adarsh-moses",
+    image: "/team-photos/adarsh.jpeg"
+  },
+  {
+    name: "Jerome D Immanuel Victor",
+    title: "MS Student",
+    education: ["BE in Mechanical Engineering, Government College of Engineering, Tirunelveli"],
+    email: "jeromeimmanuel.dv@gmail.com",
+    image: "/team-photos/jerome.jpeg"
+  },
+  {
+    name: "Cressida Sheena Priscillia I",
+    title: "MS Student",
+    education: ["B.Tech in Biomedical Engineering, Perunthalaivar Kamarajar Institute of Engineering and Technology, Karaikal"],
+    email: "cressida.sheenapi.bioeng25@cmcvellore.edu.in",
+    url: "https://www.linkedin.com/in/cressida-sheena-priscillia-i-905bb7256",
+    image: "/team-photos/cressida.jpeg"
   }
 ];
 
@@ -211,25 +237,6 @@ const projectStaff = [
     image: "/team-photos/lishwanth.jpg"
   },
   {
-    name: "Achu Vinod Thomas",
-    title: "Senior Research Fellow",
-    education: [
-      "B.Tech in Computer Science and Engineering, Mar Baselios College of Engineering and Technology, Trivandrum",
-      "M.Tech in Artificial Intelligence and Machine Learning, Vellore Institute of Technology, Vellore"
-    ],
-    email: "achu.vinod@cmcvellore.ac.in",
-    url: "linkedin/achu-vinod-thomas",
-    image: "/team-photos/achu.jpg"
-  },
-  {
-    name: "GNANAMOSES G",
-    title: "Senior Research Fellow",
-    education: ["Bachelor in Occupational Therapy, Sri Ramachandra Institute of Higher Education and Research, Chennai"],
-    email: "mosesmaxs07@gmail.com",
-    url: "linkedin/Moses",
-    image: "/team-photos/moses.jpg"
-  },
-  {
     name: "GOKUL RAJ E",
     title: "Project Research Scientist",
     education: ["MCA in Thanthai Periyar Government Institute of Technology, Vellore"],
@@ -243,15 +250,6 @@ const projectStaff = [
     email: "jaijaisurya777@gmail.com",
     image: "/team-photos/Jayasurya.jpg"
   },
-  {
-    name: "Yuvanesh S",
-    title: "Project Associate",
-    education: [
-      "B.E. in Electronics and Communication Engineering, Saveetha Engineering College (2020 - 2024)"
-    ],
-    email: "yuvansankar2424@gmail.com",
-    image: "/team-photos/yuvanesh.jpg"
-  }
 ];
 ---
 
@@ -429,11 +427,11 @@ const projectStaff = [
           </div>
         </div>
 
-        <!-- Master Students -->
+        <!-- Master Students 2nd Year -->
         <div class="mb-16">
-          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-6 text-center">Master Students</h2>
+          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-6 text-center">Master Students <span class="text-lg font-sans text-gray-500">(2nd Year)</span></h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {masterStudents.map((member) => (
+            {masterStudents2ndYear.map((member) => (
               <div class="bg-white border border-gray-200 rounded-sm overflow-hidden">
                 <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
                   <img
@@ -467,6 +465,58 @@ const projectStaff = [
                     )}
                     {member.url && (
                       <a 
+                        href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-sm text-navy-600 hover:text-navy-800 block break-all"
+                      >
+                        🔗 {member.url}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Master Students 1st Year -->
+        <div class="mb-16">
+          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-6 text-center">Master Students <span class="text-lg font-sans text-gray-500">(1st Year)</span></h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {masterStudents1stYear.map((member) => (
+              <div class="bg-white border border-gray-200 rounded-sm overflow-hidden">
+                <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    class="object-contain p-2 w-full h-full"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-navy-800 mb-1 text-lg font-serif">{member.name}</h3>
+                  {member.title && <p class="text-navy-600 font-medium mb-2 text-base">{member.title}</p>}
+                  {member.education && (
+                    <div class="mb-3">
+                      <p class="text-sm font-medium text-gray-800 mb-1">Education:</p>
+                      <ul class="text-sm text-gray-600 space-y-1">
+                        {member.education.map((edu) => (
+                          <li>• {edu}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div class="space-y-1">
+                    {member.email && (
+                      <a
+                        href={`mailto:${member.email}`}
+                        class="text-sm text-navy-600 hover:text-navy-800 block break-all"
+                      >
+                        📧 {member.email}
+                      </a>
+                    )}
+                    {member.url && (
+                      <a
                         href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
                         target="_blank"
                         rel="noopener noreferrer"

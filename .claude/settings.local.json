@@ -10,7 +10,18 @@
       "Bash(npm run lint)",
       "WebFetch(domain:clever-duckanoo-2dfe63.netlify.app)",
       "WebFetch(domain:biorehab.github.io)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(npm i *)",
+      "WebFetch(domain:docs.astro.build)",
+      "Bash(npm uninstall *)",
+      "Bash(Start-Sleep -Seconds 4)",
+      "Bash(Write-Output \"done\")",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "Bash(Get-Content *)",
+      "PowerShell(Get-ChildItem \"E:\\\\CMC\\\\website\\\\bioeng-website\\\\public\\\\team-photos\\\\\" | Where-Object { $_.Name -match \"^\\(achu|moses|yuvanesh\\)\" })",
+      "PowerShell(Remove-Item *)"
     ],
     "deny": []
   }
