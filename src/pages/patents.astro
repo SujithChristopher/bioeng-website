@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const grantedPatents = [
+  {
+    title: "Modular and portable plug-and-train robot for providing hand rehabilitation",
+    patentNumber: "Indian Patent No. 442706",
+    grantDate: "August 3, 2023",
+    inventors: "Aravind Nehrujee, Sujatha Srinivasan, Sivakumar Balasubramanian",
+    country: "India",
+    status: "Granted"
+  },
+  {
+    title: "An arm rehabilitation robot and a method for upper-limb training and assessment",
+    patentNumber: "Indian Patent No. 466323",
+    grantDate: "November 6, 2023",
+    inventors: "Sandeep Guguloth, Sujatha Srinivasan, Sivakumar Balasubramanian",
+    country: "India",
+    status: "Granted"
+  }
+];
+
+const pendingPatents = [
+  {
+    title: "A single-DOF Mobile Arm Support for Therapeutic and Assistive applications (MARS)",
+    applicationNumber: "202341031441",
+    filingDate: "May 3, 2023",
+    inventors: "Prem Kumar, Aravind Nehrujee, Sujatha Srinivasan, Sivakumar Balasubramanian",
+    country: "India",
+    status: "Pending (Provisional)"
+  },
+  {
+    title: "Multi-functional hand rehabilitation device",
+    applicationNumber: "202341051049",
+    filingDate: "July 28, 2023",
+    inventors: "Sriramachandran V, Aravind Nehrujee, Sivakumar Balasubramanian",
+    country: "India",
+    status: "Pending (Provisional)"
+  },
+  {
+    title: "An arm movement tracking assembly for tracking movement of a user's Upper limb or arm",
+    applicationNumber: "202541006822",
+    filingDate: "January 28, 2025",
+    inventors: "Sujith Christopher, Sivakumar Balasubramanian",
+    country: "India",
+    status: "Pending (Provisional)"
+  },
+  {
+    title: "System and method for assessment and training in balance rehabilitation",
+    applicationNumber: "202541025882",
+    filingDate: "March 21, 2025",
+    inventors: "Arjun Ram P, Sivakumar Balasubramanian",
+    country: "India",
+    status: "Pending (Provisional)"
+  },
+  {
+    title: "An Apparatus for the Rehabilitation of Ankle and Toe Function (ATOBOT)",
+    applicationNumber: "202541100905",
+    filingDate: "October 17, 2025",
+    inventors: "Neelakshi Ganguly, Lishwanth RK, Manish Anand, Sujatha Srinivasan, Sivakumar Balasubramanian",
+    country: "India",
+    status: "Pending (Provisional)"
+  }
+];
+---
+
+<Layout title="Patents - BioRehab Group">
+  <div class="min-h-screen bg-white">
+    <Header />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-navy-800 mb-4 font-serif">
+            Patents
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Intellectual property from our research in rehabilitation robotics and biomedical engineering
+          </p>
+        </div>
+
+        <!-- Granted Patents -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-navy-800 mb-8 font-serif">Granted Patents</h2>
+          <div class="grid grid-cols-1 gap-6">
+            {grantedPatents.map((patent) => (
+              <div class="bg-white p-6 border border-gray-200 border-l-4 border-l-green-600">
+                <div class="flex justify-between items-start mb-3">
+                  <span class="px-3 py-1 text-sm font-medium bg-green-100 text-green-800">
+                    {patent.status}
+                  </span>
+                  <span class="text-sm font-medium text-gray-500">{patent.country}</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-tight">
+                  {patent.title}
+                </h3>
+                <p class="text-navy-600 font-medium mb-2">{patent.patentNumber}</p>
+                <p class="text-sm text-gray-500 mb-1">
+                  <span class="font-medium">Grant Date:</span> {patent.grantDate}
+                </p>
+                <p class="text-sm text-gray-500">
+                  <span class="font-medium">Inventors:</span> {patent.inventors}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Pending Patents -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-navy-800 mb-8 font-serif">Pending Patents</h2>
+          <div class="grid grid-cols-1 gap-6">
+            {pendingPatents.map((patent) => (
+              <div class="bg-white p-6 border border-gray-200 border-l-4 border-l-navy-600">
+                <div class="flex justify-between items-start mb-3">
+                  <span class="px-3 py-1 text-sm font-medium bg-navy-100 text-navy-800">
+                    {patent.status}
+                  </span>
+                  <span class="text-sm font-medium text-gray-500">{patent.country}</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-tight">
+                  {patent.title}
+                </h3>
+                <p class="text-navy-600 font-medium mb-2">Application No. {patent.applicationNumber}</p>
+                <p class="text-sm text-gray-500 mb-1">
+                  <span class="font-medium">Filing Date:</span> {patent.filingDate}
+                </p>
+                <p class="text-sm text-gray-500">
+                  <span class="font-medium">Inventors:</span> {patent.inventors}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</Layout>

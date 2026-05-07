@@ -21,7 +21,8 @@
       "mcp__plugin_playwright_playwright__browser_evaluate",
       "Bash(Get-Content *)",
       "PowerShell(Get-ChildItem \"E:\\\\CMC\\\\website\\\\bioeng-website\\\\public\\\\team-photos\\\\\" | Where-Object { $_.Name -match \"^\\(achu|moses|yuvanesh\\)\" })",
-      "PowerShell(Remove-Item *)"
+      "PowerShell(Remove-Item *)",
+      "PowerShell(Get-ChildItem \"E:\\\\CMC\\\\website\\\\bioeng-website\\\\public\\\\team-photos\\\\\" | Where-Object { $_.Name -match \"lishwanth\" })"
     ],
     "deny": []
   }
