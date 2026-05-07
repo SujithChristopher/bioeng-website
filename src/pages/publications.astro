@@ -5,34 +5,43 @@ import Footer from '../components/Footer.astro';
 
 const journalPublications = [
   {
+    title: "Identification of Patient-Specific EMG Detectors for Robot-Assisted Therapy Using Rest and Move State EMG Data",
+    authors: "Monisha Yuvaraj, A.T. Prabakar, Varadhan S.K.M, Etienne Burdet, Ander Ramos-Murgialday, Sivakumar Balasubramanian",
+    journal: "IEEE Access",
+    year: "2024",
+    type: "Journal",
+    link: "https://ieeexplore.ieee.org/document/11261384",
+    doi: ""
+  },
+  {
+    title: "Autoencoder-Based Approaches for Upper Limb Use Detection",
+    authors: "Parvathy Neelakandan, Varadhan SKM, Sivakumar Balasubramanian",
+    journal: "IEEE Access",
+    year: "2024",
+    type: "Journal",
+    link: "https://ieeexplore.ieee.org/document/11124829",
+    doi: ""
+  },
+  {
     title: "GMAC – A simple measure to quantify upper limb use from wrist-worn accelerometers",
     authors: "Sivakumar Balasubramanian",
-    journal: "IEEE TNSRE",
+    journal: "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
     year: "2024",
     type: "Journal",
     link: "https://ieeexplore.ieee.org/document/10569004",
     doi: "10.1109/TNSRE.2024.3417964"
   },
   {
-    title: "Romiumeter: An Open-Source Inertial Measurement Unit-Based Goniometer",
-    authors: "Diwakar Basinepalli Reddy, Abhishek, Amal Andrews, Lenny Vasanthan, Sivakumar Balasubramanian",
-    journal: "bioRxiv Preprint",
-    year: "2024",
-    type: "Preprint",
-    link: "https://www.biorxiv.org/content/10.1101/2024.05.29.596353v1",
-    doi: "10.1101/2024.05.29.596353"
-  },
-  {
     title: "A systematic investigation of detectors for low signal-to-noise ratio EMG signals",
     authors: "Monisha Yuvaraj, Priyanka Raja, Ann David, Etienne Burdet, Varadhan SKM, Balasubramanian S",
     journal: "F1000Research",
-    year: "2023",
+    year: "2024",
     type: "Journal",
     link: "https://f1000research.com/articles/12-429",
     doi: "10.12688/f1000research.131063.1"
   },
   {
-    title: "The Facilitators and Barriers to Home-based Robotic Rehabilitation in India",
+    title: "The Facilitators and Barriers to Home-based Robotic Rehabilitation in India: A Pilot Feasibility Study",
     authors: "Nehrujee A, Prabhakar A, Balaraman S, Bombatkar R, Prakash H, SamuelKamaleshKumar S, Aaron S, Bhattacharya S, Srinivasan S, Balasubramanian S",
     journal: "Frontiers in Stroke",
     year: "2023",
@@ -41,70 +50,190 @@ const journalPublications = [
     doi: "10.3389/fstro.2023.1265702"
   },
   {
-    title: "Design and Characterization of a Self-Aligning End-Effector Robot",
-    authors: "Sivakumar Balasubramanian, et al.",
+    title: "Design and Characterization of a Self-Aligning End-Effector Robot for Single-Joint Arm Movement Rehabilitation",
+    authors: "Mathavan Jeyabalan P.K., Nehrujee A., Elias S., Magesh Kumar M., Sujatha S., Balasubramanian S.",
     journal: "Robotics",
     year: "2023",
     type: "Journal",
-    link: "",
-    doi: ""
+    link: "https://doi.org/10.3390/robotics12060149",
+    doi: "10.3390/robotics12060149"
   },
   {
-    title: "Comparing algorithms for assessing upper limb use",
-    authors: "Sivakumar Balasubramanian, et al.",
+    title: "Comparing algorithms for assessing upper limb use with inertial measurement units",
+    authors: "T Subash, A David, S ReetaJanetSurekha, S Gayathri, S Samuelkamaleshkumar, H Prakash, N Malesevic, C Antfolk, SKM Varadhan, A Melendez-Calderon, S Balasubramanian",
     journal: "Frontiers in Physiology",
     year: "2022",
     type: "Journal",
-    link: "",
-    doi: ""
+    link: "https://www.frontiersin.org/articles/10.3389/fphys.2022.1023589/full",
+    doi: "10.3389/fphys.2022.1023589"
   },
   {
-    title: "Encoder-Controlled Functional Electrical Stimulator",
-    authors: "Sivakumar Balasubramanian, et al.",
+    title: "Encoder-Controlled Functional Electrical Stimulator for Bilateral Wrist Activities—Design and Evaluation",
+    authors: "CD Solomons, V Shanmugasundaram, S Balasubramanian",
     journal: "Bioengineering",
     year: "2022",
     type: "Journal",
-    link: "",
-    doi: ""
+    link: "https://www.mdpi.com/2306-5354/9/10/501",
+    doi: "10.3390/bioengineering9100501"
   },
   {
-    title: "Plug-and-Train Robot (PLUTO) for Hand Rehabilitation",
-    authors: "A Nehrujee, et al.",
+    title: "Experiences of patients who had a stroke and rehabilitation professionals with upper limb rehabilitation robots: a qualitative systematic review protocol",
+    authors: "M Chockalingam, LT Vasanthan, S Balasubramanian, V Sriram",
+    journal: "BMJ Open",
+    year: "2022",
+    type: "Journal",
+    link: "https://bmjopen.bmj.com/content/12/9/e065177.abstract",
+    doi: "10.1136/bmjopen-2022-065177"
+  },
+  {
+    title: "Plug-and-Train Robot (PLUTO) for Hand Rehabilitation: Design and Preliminary Evaluation",
+    authors: "A Nehrujee, H Andrew, Reethajanetsurekha, A Patricia, S Samuelkamaleshkumar, H Prakash, S Srinivasan, S Balasubramanian",
     journal: "IEEE Access",
     year: "2021",
     type: "Journal",
-    link: "",
+    link: "https://ieeexplore.ieee.org/document/9548086",
     doi: ""
   },
   {
-    title: "A Framework for Sensor-Based Assessment of Upper-Limb Functioning",
-    authors: "Sivakumar Balasubramanian, et al.",
+    title: "A self-aligning end-effector robot for individual joint training of the human arm",
+    authors: "S Balasubramanian, S Guguloth, JS Mohammed, S Srinivasan",
+    journal: "Journal of Rehabilitation and Assistive Technologies Engineering",
+    year: "2021",
+    type: "Journal",
+    link: "https://journals.sagepub.com/doi/full/10.1177/20556683211019866",
+    doi: "10.1177/20556683211019866"
+  },
+  {
+    title: "A Framework for Sensor-Based Assessment of Upper-Limb Functioning in Hemiparesis",
+    authors: "A David, T Subhash, SKM Varadhan, A Melendez-Calderon, S Balasubramanian",
     journal: "Frontiers in Human Neuroscience",
     year: "2021",
     type: "Journal",
-    link: "",
+    link: "https://www.frontiersin.org/articles/10.3389/fnhum.2021.667509/full",
+    doi: "10.3389/fnhum.2021.667509"
+  },
+  {
+    title: "Quantification of the relative arm-use in patients with hemiparesis using inertial measurement units",
+    authors: "A David, S ReethaJanetSureka, S Gayathri, SJ Annamalai, S Samuelkamleshkumar, A Kuruvilla, HP Magimairaj, SKM Varadhan, S Balasubramanian",
+    journal: "Journal of Rehabilitation and Assistive Technologies Engineering",
+    year: "2021",
+    type: "Journal",
+    link: "https://journals.sagepub.com/doi/full/10.1177/20556683211019694",
+    doi: "10.1177/20556683211019694"
+  },
+  {
+    title: "Estimating Movement Smoothness From Inertial Measurement Units",
+    authors: "A Melendez-Calderon, C Shirota, S Balasubramanian",
+    journal: "Frontiers in Bioengineering and Biotechnology",
+    year: "2021",
+    type: "Journal",
+    link: "https://www.frontiersin.org/articles/10.3389/fbioe.2020.558771/full",
+    doi: "10.3389/fbioe.2020.558771"
+  },
+  {
+    title: "A Smartphone-based gaming system for vestibular rehabilitation: A usability study",
+    authors: "A Nehrujee, L Vasanthan, A Lepcha, S Balasubramanian",
+    journal: "Journal of Vestibular Research",
+    year: "2019",
+    type: "Journal",
+    link: "https://content.iospress.com/articles/journal-of-vestibular-research/ves190660",
+    doi: ""
+  },
+  {
+    title: "Technology-aided assessments of sensorimotor function: current use, barriers and future directions in the view of different stakeholders",
+    authors: "C Shirota, S Balasubramanian, A Melendez-Calderon",
+    journal: "Journal of NeuroEngineering and Rehabilitation",
+    year: "2019",
+    type: "Journal",
+    link: "https://jneuroengrehab.biomedcentral.com/articles/10.1186/s12984-019-0519-7",
+    doi: "10.1186/s12984-019-0519-7"
+  },
+  {
+    title: "Is EMG a viable alternative to BCI for detecting movement intention in severe stroke?",
+    authors: "S Balasubramanian, E Garcia-Cossio, N Birbaumer, E Burdet, A Ramos-Murguialday",
+    journal: "IEEE Transactions on Biomedical Engineering",
+    year: "2018",
+    type: "Journal",
+    link: "https://ieeexplore.ieee.org/document/8320831",
+    doi: ""
+  },
+  {
+    title: "Red cell indexes made easy using an interactive animation: do students and their scores concur?",
+    authors: "U Kachroo, E Vinod, S Balasubramanian, N Prince",
+    journal: "Advances in Physiology Education",
+    year: "2018",
+    type: "Journal",
+    link: "https://journals.physiology.org/doi/full/10.1152/advan.00142.2017",
+    doi: "10.1152/advan.00142.2017"
+  },
+  {
+    title: "SITAR: a system for independent task-oriented assessment and rehabilitation",
+    authors: "A Hussain, S Balasubramanian, N Roach, J Klein, N Jarrassé, M Mace, A David, S Guy, E Burdet",
+    journal: "Journal of Rehabilitation and Assistive Technologies Engineering",
+    year: "2017",
+    type: "Journal",
+    link: "https://journals.sagepub.com/doi/full/10.1177/2055668317729637",
+    doi: "10.1177/2055668317729637"
+  },
+  {
+    title: "On the assessment of coordination between upper extremities: towards a common language between rehabilitation engineers, clinicians and neuroscientists",
+    authors: "C Shirota, J Jansa, J Diaz, S Balasubramanian, S Mazzoleni, NA Borghese, A Melendez-Calderon",
+    journal: "Journal of NeuroEngineering and Rehabilitation",
+    year: "2016",
+    type: "Journal",
+    link: "https://jneuroengrehab.biomedcentral.com/articles/10.1186/s12984-016-0186-x",
+    doi: "10.1186/s12984-016-0186-x"
+  },
+  {
+    title: "Investigation of isometric strength and control of the upper extremities in multiple sclerosis",
+    authors: "A Hussain, S Balasubramanian, I Lamers, S Guy, P Feys, E Burdet",
+    journal: "Journal of Rehabilitation and Assistive Technologies Engineering",
+    year: "2016",
+    type: "Journal",
+    link: "https://journals.sagepub.com/doi/full/10.1177/2055668316663977",
+    doi: "10.1177/2055668316663977"
+  }
+];
+
+const preprintPublications = [
+  {
+    title: "Effect of Role of Robotic Assistance on Upper-limb Sensorimotor Recovery: A Systematic Review and Meta-Analysis",
+    authors: "Ritwika Choudhuri, John Solomon, Aravind Nehrujee, Sujatha Srinivasan, Sivakumar Balasubramanian",
+    journal: "medRxiv",
+    year: "2025",
+    type: "Preprint",
+    link: "https://www.medrxiv.org/content/10.1101/2025.04.24.25326375v1.full.pdf+html",
+    doi: "10.1101/2025.04.24.25326375"
+  },
+  {
+    title: "Romiumeter: An Open-Source Inertial Measurement Unit-Based Goniometer for Range of Motion Measurements",
+    authors: "Diwakar Basinepalli Reddy, Abhishek, Amal Andrews, Lenny Vasanthan, Sivakumar Balasubramanian",
+    journal: "bioRxiv",
+    year: "2024",
+    type: "Preprint",
+    link: "https://www.biorxiv.org/content/10.1101/2024.05.29.596353v1",
+    doi: "10.1101/2024.05.29.596353"
+  },
+  {
+    title: "On the Role of Robotic Assistance in Upper-Limb Neurorehabilitation",
+    authors: "A Nehrujee, S Srinivasan, S Balasubramanian",
+    journal: "Preprints",
+    year: "2022",
+    type: "Preprint",
+    link: "https://scholar.google.co.in/scholar?oi=bibs&cluster=2304703561339307903&btnI=1&hl=en",
     doi: ""
   }
 ];
 
 const conferencePublications = [
   {
-    title: "A Plug-and-Train Robotic Kit (PLUTO) For Hand Rehabilitation",
-    authors: "A Nehrujee, et al.",
+    title: "A Plug-and-Train Robotic Kit (PLUTO) For Hand Rehabilitation: Pilot Usability Study",
+    authors: "A Nehrujee, A Hallel, A Patricia, S Samuelkamaleshkumar, H Prakash, S Srinivasan, S Balasubramanian",
     journal: "BioRob",
     year: "2020",
     type: "Conference",
     link: "https://ieeexplore.ieee.org/abstract/document/9224369",
     doi: "10.1109/BioRob49111.2020.9224369"
-  },
-  {
-    title: "A Smartphone-based gaming system for vestibular rehabilitation",
-    authors: "Sivakumar Balasubramanian, et al.",
-    journal: "Conference",
-    year: "2019",
-    type: "Conference",
-    link: "",
-    doi: ""
   }
 ];
 ---
@@ -112,7 +241,7 @@ const conferencePublications = [
 <Layout title="Publications - BioRehab Group">
   <div class="min-h-screen bg-white">
     <Header />
-    
+
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
@@ -120,7 +249,7 @@ const conferencePublications = [
             Publications
           </h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our research contributions to the field of neurorehabilitation, 
+            Our research contributions to the field of neurorehabilitation,
             rehabilitation robotics, and bioengineering
           </p>
         </div>
@@ -134,6 +263,54 @@ const conferencePublications = [
               <div class="bg-white p-6 border border-gray-200 border-l-4 border-l-navy-600">
                 <div class="flex justify-between items-start mb-3">
                   <span class="px-3 py-1 text-sm font-medium bg-navy-100 text-navy-800">
+                    {publication.type}
+                  </span>
+                  <span class="text-sm font-medium text-gray-500">{publication.year}</span>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-tight">
+                  {publication.title}
+                </h3>
+                <p class="text-gray-600 font-medium mb-2">{publication.journal}</p>
+                {publication.authors && (
+                  <p class="text-sm text-gray-500 mb-3">
+                    <span class="font-medium">Authors:</span> {publication.authors}
+                  </p>
+                )}
+                <div class="flex gap-2 flex-wrap">
+                  {publication.link && (
+                    <a
+                      href={publication.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center px-3 py-1 bg-navy-800 text-white text-sm rounded hover:bg-navy-900 transition-colors"
+                    >
+                      Read Paper
+                    </a>
+                  )}
+                  {publication.doi && (
+                    <a
+                      href={`https://doi.org/${publication.doi}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center px-3 py-1 border border-navy-600 text-navy-600 text-sm rounded hover:bg-navy-50 transition-colors"
+                    >
+                      DOI
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Preprints -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-navy-800 mb-8 font-serif">Preprints</h2>
+          <div class="grid grid-cols-1 gap-6">
+            {preprintPublications.map((publication) => (
+              <div class="bg-white p-6 border border-gray-200 border-l-4 border-l-gold-500">
+                <div class="flex justify-between items-start mb-3">
+                  <span class="px-3 py-1 text-sm font-medium bg-yellow-50 text-yellow-800">
                     {publication.type}
                   </span>
                   <span class="text-sm font-medium text-gray-500">{publication.year}</span>
