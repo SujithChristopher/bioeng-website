@@ -17,7 +17,7 @@ This website is built using [Astro](https://astro.build), a modern static site g
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Astro 4.16.18
+- **Framework**: Astro 6.x
 - **Styling**: Tailwind CSS
 - **Fonts**: Google Fonts (Geist Sans & Geist Mono)
 - **Icons**: Heroicons (SVG)
@@ -63,6 +63,7 @@ All commands are run from the root of the project, from a terminal:
 │   │   ├── publications.astro
 │   │   ├── team.astro
 │   │   ├── collaborations.astro
+│   │   ├── patents.astro
 │   │   ├── open-science.astro
 │   │   └── join-us.astro
 │   ├── styles.css         # Global styles
@@ -97,9 +98,8 @@ The website is built as a static site and can be deployed to any static hosting 
 ## 📧 Contact
 
 For questions about the website or research, contact:
-- Email: biorehab@cmcvellore.ac.in
-- Phone: +91-416-228-4267
+- Email: biorehabilitationgroup@gmail.com
 
 ## 📄 License
 
-© 2024 BioRehab Group, Department of Bioengineering, Christian Medical College Vellore. All rights reserved.
+© 2026 BioRehab Group, Department of Bioengineering, Christian Medical College Vellore. All rights reserved.
