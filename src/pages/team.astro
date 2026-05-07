@@ -27,7 +27,14 @@ const faculty = [
     ],
     email: "",
     image: "/team-photos/cassandra.jpg"
-  }
+  },
+  {
+    name: "Dr. Rajdeep Ojha",
+    title: "Professor",
+    education: [],
+    email: "",
+    image: "/team-photos/rajdeep.jpg"
+  },
 ];
 
 const postdocs = [
@@ -250,6 +257,21 @@ const projectStaff = [
     email: "jaijaisurya777@gmail.com",
     image: "/team-photos/Jayasurya.jpg"
   },
+];
+
+const administrative = [
+  {
+    name: "Lalitha C.",
+    title: "Secretary G-I",
+    email: "",
+    image: "/team-photos/lalitha.jpg"
+  },
+  {
+    name: "Clinton N",
+    title: "Engineer G-IV",
+    email: "",
+    image: "/team-photos/clinton.jpg"
+  }
 ];
 ---
 
@@ -576,6 +598,38 @@ const projectStaff = [
                         class="text-sm text-navy-600 hover:text-navy-800 block break-all"
                       >
                         🔗 {member.url}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Administrative Staff -->
+        <div class="mb-16">
+          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-6 text-center">Administrative Staff</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {administrative.map((member) => (
+              <div class="bg-white border border-gray-200 rounded-sm overflow-hidden">
+                <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    class="object-contain p-2 w-full h-full"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-navy-800 mb-1 text-lg font-serif">{member.name}</h3>
+                  {member.title && <p class="text-navy-600 font-medium mb-2 text-base">{member.title}</p>}
+                  <div class="space-y-1">
+                    {member.email && (
+                      <a
+                        href={`mailto:${member.email}`}
+                        class="text-sm text-navy-600 hover:text-navy-800 block break-all"
+                      >
+                        📧 {member.email}
                       </a>
                     )}
                   </div>
