@@ -9,16 +9,14 @@ const grantedPatents = [
     patentNumber: "Indian Patent No. 442706",
     grantDate: "August 3, 2023",
     inventors: "Aravind Nehrujee, Sujatha Srinivasan, Sivakumar Balasubramanian",
-    country: "India",
-    status: "Granted"
+    country: "India"
   },
   {
     title: "An arm rehabilitation robot and a method for upper-limb training and assessment",
     patentNumber: "Indian Patent No. 466323",
     grantDate: "November 6, 2023",
     inventors: "Sandeep Guguloth, Sujatha Srinivasan, Sivakumar Balasubramanian",
-    country: "India",
-    status: "Granted"
+    country: "India"
   }
 ];
 
@@ -28,40 +26,35 @@ const pendingPatents = [
     applicationNumber: "202341031441",
     filingDate: "May 3, 2023",
     inventors: "Prem Kumar, Aravind Nehrujee, Sujatha Srinivasan, Sivakumar Balasubramanian",
-    country: "India",
-    status: "Pending (Provisional)"
+    country: "India"
   },
   {
     title: "Multi-functional hand rehabilitation device",
     applicationNumber: "202341051049",
     filingDate: "July 28, 2023",
     inventors: "Sriramachandran V, Aravind Nehrujee, Sivakumar Balasubramanian",
-    country: "India",
-    status: "Pending (Provisional)"
+    country: "India"
   },
   {
     title: "An arm movement tracking assembly for tracking movement of a user's Upper limb or arm",
     applicationNumber: "202541006822",
     filingDate: "January 28, 2025",
     inventors: "Sujith Christopher, Sivakumar Balasubramanian",
-    country: "India",
-    status: "Pending (Provisional)"
+    country: "India"
   },
   {
     title: "System and method for assessment and training in balance rehabilitation",
     applicationNumber: "202541025882",
     filingDate: "March 21, 2025",
     inventors: "Arjun Ram P, Sivakumar Balasubramanian",
-    country: "India",
-    status: "Pending (Provisional)"
+    country: "India"
   },
   {
     title: "An Apparatus for the Rehabilitation of Ankle and Toe Function (ATOBOT)",
     applicationNumber: "202541100905",
     filingDate: "October 17, 2025",
     inventors: "Neelakshi Ganguly, Lishwanth RK, Manish Anand, Sujatha Srinivasan, Sivakumar Balasubramanian",
-    country: "India",
-    status: "Pending (Provisional)"
+    country: "India"
   }
 ];
 ---
@@ -89,7 +82,7 @@ const pendingPatents = [
               <div class="bg-white p-6 border border-gray-200 border-l-4 border-l-green-600">
                 <div class="flex justify-between items-start mb-3">
                   <span class="px-3 py-1 text-sm font-medium bg-green-100 text-green-800">
-                    {patent.status}
+                    Granted
                   </span>
                   <span class="text-sm font-medium text-gray-500">{patent.country}</span>
                 </div>
@@ -116,7 +109,7 @@ const pendingPatents = [
               <div class="bg-white p-6 border border-gray-200 border-l-4 border-l-navy-600">
                 <div class="flex justify-between items-start mb-3">
                   <span class="px-3 py-1 text-sm font-medium bg-navy-100 text-navy-800">
-                    {patent.status}
+                    Pending
                   </span>
                   <span class="text-sm font-medium text-gray-500">{patent.country}</span>
                 </div>
