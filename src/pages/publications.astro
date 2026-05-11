@@ -3,6 +3,61 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+const grantedPatents = [
+  {
+    title: "Modular and portable plug-and-train robot for providing hand rehabilitation",
+    patentNumber: "Indian Patent No. 442706",
+    grantDate: "August 3, 2023",
+    inventors: "Aravind Nehrujee, Sujatha Srinivasan, Sivakumar Balasubramanian",
+    country: "India"
+  },
+  {
+    title: "An arm rehabilitation robot and a method for upper-limb training and assessment",
+    patentNumber: "Indian Patent No. 466323",
+    grantDate: "November 6, 2023",
+    inventors: "Sandeep Guguloth, Sujatha Srinivasan, Sivakumar Balasubramanian",
+    country: "India"
+  }
+];
+
+const pendingPatents = [
+  {
+    title: "A single-DOF Mobile Arm Support for Therapeutic and Assistive applications (MARS)",
+    applicationNumber: "202341031441",
+    filingDate: "May 3, 2023",
+    inventors: "Prem Kumar, Aravind Nehrujee, Sujatha Srinivasan, Sivakumar Balasubramanian",
+    country: "India"
+  },
+  {
+    title: "Multi-functional hand rehabilitation device",
+    applicationNumber: "202341051049",
+    filingDate: "July 28, 2023",
+    inventors: "Sriramachandran V, Aravind Nehrujee, Sivakumar Balasubramanian",
+    country: "India"
+  },
+  {
+    title: "An arm movement tracking assembly for tracking movement of a user's Upper limb or arm",
+    applicationNumber: "202541006822",
+    filingDate: "January 28, 2025",
+    inventors: "Sujith Christopher, Sivakumar Balasubramanian",
+    country: "India"
+  },
+  {
+    title: "System and method for assessment and training in balance rehabilitation",
+    applicationNumber: "202541025882",
+    filingDate: "March 21, 2025",
+    inventors: "Arjun Ram P, Sivakumar Balasubramanian",
+    country: "India"
+  },
+  {
+    title: "An Apparatus for the Rehabilitation of Ankle and Toe Function (ATOBOT)",
+    applicationNumber: "202541100905",
+    filingDate: "October 17, 2025",
+    inventors: "Neelakshi Ganguly, Lishwanth RK, Manish Anand, Sujatha Srinivasan, Sivakumar Balasubramanian",
+    country: "India"
+  }
+];
+
 const journalPublications = [
   {
     title: "Identification of Patient-Specific EMG Detectors for Robot-Assisted Therapy Using Rest and Move State EMG Data",
@@ -238,16 +293,16 @@ const conferencePublications = [
 ];
 ---
 
-<Layout title="Publications - Department of Bioengineering, CMC Vellore">
+<Layout title="Publications & Patents - Department of Bioengineering, CMC Vellore">
   <div class="min-h-screen bg-white">
     <Header />
 
     <!-- Page Header -->
     <section class="py-12 bg-navy-900 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 font-serif">Publications</h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 font-serif">Publications & Patents</h1>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Research contributions from the Department of Bioengineering, CMC Vellore
+          Research contributions and intellectual property from the Department of Bioengineering, CMC Vellore
         </p>
       </div>
     </section>
@@ -256,12 +311,66 @@ const conferencePublications = [
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Section jump links -->
-        <div class="flex gap-4 mb-10 text-sm border-b border-gray-200 pb-4">
+        <div class="flex flex-wrap gap-x-4 gap-y-2 mb-10 text-sm border-b border-gray-200 pb-4">
+          <a href="#granted" class="text-navy-600 hover:underline">Granted Patents ({grantedPatents.length})</a>
+          <span class="text-gray-300">·</span>
+          <a href="#pending" class="text-navy-600 hover:underline">Pending Patents ({pendingPatents.length})</a>
+          <span class="text-gray-300">·</span>
           <a href="#journals" class="text-navy-600 hover:underline">Journal Publications ({journalPublications.length})</a>
           <span class="text-gray-300">·</span>
           <a href="#preprints" class="text-navy-600 hover:underline">Preprints ({preprintPublications.length})</a>
           <span class="text-gray-300">·</span>
           <a href="#conferences" class="text-navy-600 hover:underline">Conference ({conferencePublications.length})</a>
+        </div>
+
+        <!-- Granted Patents -->
+        <div class="mb-8" id="granted">
+          <details open>
+            <summary class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-4 cursor-pointer list-none flex justify-between items-center">
+              Granted Patents
+              <span class="text-sm font-normal text-gray-400">{grantedPatents.length} patents</span>
+            </summary>
+            <div class="divide-y divide-gray-100">
+              {grantedPatents.map((patent) => (
+                <div class="py-3 flex gap-4 items-baseline">
+                  <span class="text-xs text-gray-400 font-mono shrink-0 w-16 leading-snug">{patent.grantDate.split(' ').pop()}</span>
+                  <div class="min-w-0">
+                    <span class="text-sm font-medium text-navy-800 leading-snug">{patent.title}</span>
+                    <p class="text-xs text-gray-500 mt-0.5 leading-snug">{patent.inventors}</p>
+                    <p class="text-xs text-gray-600 mt-0.5">
+                      <span class="italic">{patent.patentNumber}</span>
+                      <span class="ml-2 text-gray-400">· granted {patent.grantDate}</span>
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </details>
+        </div>
+
+        <!-- Pending Patents -->
+        <div class="mb-8" id="pending">
+          <details open>
+            <summary class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-4 cursor-pointer list-none flex justify-between items-center">
+              Pending Patents
+              <span class="text-sm font-normal text-gray-400">{pendingPatents.length} patents</span>
+            </summary>
+            <div class="divide-y divide-gray-100">
+              {pendingPatents.map((patent) => (
+                <div class="py-3 flex gap-4 items-baseline">
+                  <span class="text-xs text-gray-400 font-mono shrink-0 w-16 leading-snug">{patent.filingDate.split(' ').pop()}</span>
+                  <div class="min-w-0">
+                    <span class="text-sm font-medium text-navy-800 leading-snug">{patent.title}</span>
+                    <p class="text-xs text-gray-500 mt-0.5 leading-snug">{patent.inventors}</p>
+                    <p class="text-xs text-gray-600 mt-0.5">
+                      <span class="italic">App. No. {patent.applicationNumber}</span>
+                      <span class="ml-2 text-gray-400">· filed {patent.filingDate}</span>
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </details>
         </div>
 
         <!-- Journal Publications -->

@@ -24,7 +24,8 @@
       "PowerShell(Remove-Item *)",
       "PowerShell(Get-ChildItem \"E:\\\\CMC\\\\website\\\\bioeng-website\\\\public\\\\team-photos\\\\\" | Where-Object { $_.Name -match \"lishwanth\" })",
       "Bash(studio site *)",
-      "Bash(npm --version)"
+      "Bash(npm --version)",
+      "Bash(Remove-Item *)"
     ],
     "deny": []
   }
