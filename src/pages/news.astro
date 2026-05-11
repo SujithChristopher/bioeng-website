@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const newsItems = [
+  {
+    title: "PLUTO - Wearable Gait Analysis System",
+    description: "Our research team has developed PLUTO, an innovative wearable gait analysis system that provides real-time biomechanical feedback for rehabilitation applications.",
+    image: "/news/pluto_news1.png"
+  },
+  {
+    title: "Research Day 2024",
+    description: "BioRehab Group participated in the annual research day, showcasing our latest developments in neurorehabilitation technologies and collaborative research initiatives.",
+    image: "/news/pluto_news2.png"
+  },
+  {
+    title: "R2 Robotic Rehabilitation System",
+    description: "Introduction of our new R2 robotic system designed for upper limb rehabilitation, featuring advanced control algorithms and adaptive therapy protocols.",
+    image: "/news/pluto_news3.png"
+  },
+  {
+    title: "NOARK: Not Just an Arm Skateboard",
+    description: "Introducing NOARK — a portable, gamified arm skateboard designed for upper-limb rehabilitation, making therapy engaging and accessible for patients.",
+    image: "/news/noark_news.jpg"
+  }
+];
+---
+
+<Layout title="News - Department of Bioengineering, CMC Vellore">
+  <div class="min-h-screen bg-white">
+    <Header />
+
+    <!-- Page Header -->
+    <section class="py-12 bg-navy-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 font-serif">News</h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Latest developments and updates from the Department of Bioengineering, CMC Vellore
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="divide-y divide-gray-100">
+          {newsItems.map((item) => (
+            <details class="group py-2">
+              <summary class="cursor-pointer list-none flex gap-4 items-start py-2 hover:bg-gray-50 rounded px-2 -mx-2 transition-colors">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  class="w-16 h-16 object-cover rounded shrink-0 bg-gray-100"
+                />
+                <div class="min-w-0 flex-1">
+                  <p class="text-sm font-medium text-navy-800 leading-snug">{item.title}</p>
+                  <p class="text-xs text-gray-500 mt-1 leading-snug line-clamp-2">{item.description}</p>
+                </div>
+                <svg class="w-4 h-4 text-gray-400 shrink-0 mt-1 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </summary>
+              <div class="mt-4 mb-2 ml-2 mr-2">
+                <div class="md:flex gap-6 bg-gray-50 border border-gray-200 rounded overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    class="md:w-64 w-full h-48 md:h-auto object-cover shrink-0"
+                  />
+                  <div class="p-5">
+                    <h2 class="text-lg font-bold text-navy-800 font-serif mb-2">{item.title}</h2>
+                    <p class="text-sm text-gray-700 leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</Layout>
