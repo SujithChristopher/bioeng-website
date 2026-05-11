@@ -22,7 +22,9 @@
       "Bash(Get-Content *)",
       "PowerShell(Get-ChildItem \"E:\\\\CMC\\\\website\\\\bioeng-website\\\\public\\\\team-photos\\\\\" | Where-Object { $_.Name -match \"^\\(achu|moses|yuvanesh\\)\" })",
       "PowerShell(Remove-Item *)",
-      "PowerShell(Get-ChildItem \"E:\\\\CMC\\\\website\\\\bioeng-website\\\\public\\\\team-photos\\\\\" | Where-Object { $_.Name -match \"lishwanth\" })"
+      "PowerShell(Get-ChildItem \"E:\\\\CMC\\\\website\\\\bioeng-website\\\\public\\\\team-photos\\\\\" | Where-Object { $_.Name -match \"lishwanth\" })",
+      "Bash(studio site *)",
+      "Bash(npm --version)"
     ],
     "deny": []
   }
