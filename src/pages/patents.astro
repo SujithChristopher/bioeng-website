@@ -59,74 +59,80 @@ const pendingPatents = [
 ];
 ---
 
-<Layout title="Patents - BioRehab Group">
+<Layout title="Patents - Department of Bioengineering, CMC Vellore">
   <div class="min-h-screen bg-white">
     <Header />
 
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h1 class="text-4xl md:text-5xl font-bold text-navy-800 mb-4 font-serif">
-            Patents
-          </h1>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Intellectual property from our research in rehabilitation robotics and biomedical engineering
-          </p>
+    <!-- Page Header -->
+    <section class="py-12 bg-navy-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 font-serif">Patents</h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Intellectual property from research at the Department of Bioengineering, CMC Vellore
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section jump links -->
+        <div class="flex gap-4 mb-10 text-sm border-b border-gray-200 pb-4">
+          <a href="#granted" class="text-navy-600 hover:underline">Granted ({grantedPatents.length})</a>
+          <span class="text-gray-300">·</span>
+          <a href="#pending" class="text-navy-600 hover:underline">Pending ({pendingPatents.length})</a>
         </div>
 
         <!-- Granted Patents -->
-        <div class="mb-16">
-          <h2 class="text-3xl font-bold text-navy-800 mb-8 font-serif">Granted Patents</h2>
-          <div class="grid grid-cols-1 gap-6">
-            {grantedPatents.map((patent) => (
-              <div class="bg-white p-6 border border-gray-200 border-l-4 border-l-green-600">
-                <div class="flex justify-between items-start mb-3">
-                  <span class="px-3 py-1 text-sm font-medium bg-green-100 text-green-800">
-                    Granted
-                  </span>
-                  <span class="text-sm font-medium text-gray-500">{patent.country}</span>
+        <div class="mb-8" id="granted">
+          <details open>
+            <summary class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-4 cursor-pointer list-none flex justify-between items-center">
+              Granted Patents
+              <span class="text-sm font-normal text-gray-400">{grantedPatents.length} patents</span>
+            </summary>
+            <div class="divide-y divide-gray-100">
+              {grantedPatents.map((patent) => (
+                <div class="py-3 flex gap-4 items-baseline">
+                  <span class="text-xs text-gray-400 font-mono shrink-0 w-16 leading-snug">{patent.grantDate.split(' ').pop()}</span>
+                  <div class="min-w-0">
+                    <span class="text-sm font-medium text-navy-800 leading-snug">{patent.title}</span>
+                    <p class="text-xs text-gray-500 mt-0.5 leading-snug">{patent.inventors}</p>
+                    <p class="text-xs text-gray-600 mt-0.5">
+                      <span class="italic">{patent.patentNumber}</span>
+                      <span class="ml-2 text-gray-400">· granted {patent.grantDate}</span>
+                    </p>
+                  </div>
                 </div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-tight">
-                  {patent.title}
-                </h3>
-                <p class="text-navy-600 font-medium mb-2">{patent.patentNumber}</p>
-                <p class="text-sm text-gray-500 mb-1">
-                  <span class="font-medium">Grant Date:</span> {patent.grantDate}
-                </p>
-                <p class="text-sm text-gray-500">
-                  <span class="font-medium">Inventors:</span> {patent.inventors}
-                </p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </details>
         </div>
 
         <!-- Pending Patents -->
-        <div class="mb-16">
-          <h2 class="text-3xl font-bold text-navy-800 mb-8 font-serif">Pending Patents</h2>
-          <div class="grid grid-cols-1 gap-6">
-            {pendingPatents.map((patent) => (
-              <div class="bg-white p-6 border border-gray-200 border-l-4 border-l-navy-600">
-                <div class="flex justify-between items-start mb-3">
-                  <span class="px-3 py-1 text-sm font-medium bg-navy-100 text-navy-800">
-                    Pending
-                  </span>
-                  <span class="text-sm font-medium text-gray-500">{patent.country}</span>
+        <div class="mb-8" id="pending">
+          <details open>
+            <summary class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-4 cursor-pointer list-none flex justify-between items-center">
+              Pending Patents
+              <span class="text-sm font-normal text-gray-400">{pendingPatents.length} patents</span>
+            </summary>
+            <div class="divide-y divide-gray-100">
+              {pendingPatents.map((patent) => (
+                <div class="py-3 flex gap-4 items-baseline">
+                  <span class="text-xs text-gray-400 font-mono shrink-0 w-16 leading-snug">{patent.filingDate.split(' ').pop()}</span>
+                  <div class="min-w-0">
+                    <span class="text-sm font-medium text-navy-800 leading-snug">{patent.title}</span>
+                    <p class="text-xs text-gray-500 mt-0.5 leading-snug">{patent.inventors}</p>
+                    <p class="text-xs text-gray-600 mt-0.5">
+                      <span class="italic">App. No. {patent.applicationNumber}</span>
+                      <span class="ml-2 text-gray-400">· filed {patent.filingDate}</span>
+                    </p>
+                  </div>
                 </div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-tight">
-                  {patent.title}
-                </h3>
-                <p class="text-navy-600 font-medium mb-2">Application No. {patent.applicationNumber}</p>
-                <p class="text-sm text-gray-500 mb-1">
-                  <span class="font-medium">Filing Date:</span> {patent.filingDate}
-                </p>
-                <p class="text-sm text-gray-500">
-                  <span class="font-medium">Inventors:</span> {patent.inventors}
-                </p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </details>
         </div>
+
       </div>
     </section>
 
