@@ -238,199 +238,122 @@ const conferencePublications = [
 ];
 ---
 
-<Layout title="Publications - BioRehab Group">
+<Layout title="Publications - Department of Bioengineering, CMC Vellore">
   <div class="min-h-screen bg-white">
     <Header />
 
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h1 class="text-4xl md:text-5xl font-bold text-navy-800 mb-4 font-serif">
-            Publications
-          </h1>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our research contributions to the field of neurorehabilitation,
-            rehabilitation robotics, and bioengineering
-          </p>
+    <!-- Page Header -->
+    <section class="py-12 bg-navy-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 font-serif">Publications</h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Research contributions from the Department of Bioengineering, CMC Vellore
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section jump links -->
+        <div class="flex gap-4 mb-10 text-sm border-b border-gray-200 pb-4">
+          <a href="#journals" class="text-navy-600 hover:underline">Journal Publications ({journalPublications.length})</a>
+          <span class="text-gray-300">·</span>
+          <a href="#preprints" class="text-navy-600 hover:underline">Preprints ({preprintPublications.length})</a>
+          <span class="text-gray-300">·</span>
+          <a href="#conferences" class="text-navy-600 hover:underline">Conference ({conferencePublications.length})</a>
         </div>
 
-
         <!-- Journal Publications -->
-        <div class="mb-16">
-          <h2 class="text-3xl font-bold text-navy-800 mb-8 font-serif">Journal Publications</h2>
-          <div class="grid grid-cols-1 gap-6">
-            {journalPublications.map((publication) => (
-              <div class="bg-white p-6 border border-gray-200 border-l-4 border-l-navy-600">
-                <div class="flex justify-between items-start mb-3">
-                  <span class="px-3 py-1 text-sm font-medium bg-navy-100 text-navy-800">
-                    {publication.type}
-                  </span>
-                  <span class="text-sm font-medium text-gray-500">{publication.year}</span>
+        <div class="mb-8" id="journals">
+          <details open>
+            <summary class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-4 cursor-pointer list-none flex justify-between items-center">
+              Journal Publications
+              <span class="text-sm font-normal text-gray-400">{journalPublications.length} papers</span>
+            </summary>
+            <div class="divide-y divide-gray-100">
+              {journalPublications.map((pub) => (
+                <div class="py-3 flex gap-4 items-baseline">
+                  <span class="text-xs text-gray-400 font-mono shrink-0 w-8">{pub.year}</span>
+                  <div class="min-w-0">
+                    {pub.link
+                      ? <a href={pub.link} target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-navy-800 hover:underline leading-snug">{pub.title}</a>
+                      : <span class="text-sm font-medium text-navy-800 leading-snug">{pub.title}</span>
+                    }
+                    <p class="text-xs text-gray-500 mt-0.5 leading-snug">{pub.authors}</p>
+                    <p class="text-xs text-gray-600 mt-0.5">
+                      <span class="italic">{pub.journal}</span>
+                      {pub.doi && (
+                        <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="ml-2 text-navy-600 hover:underline not-italic">DOI</a>
+                      )}
+                    </p>
+                  </div>
                 </div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-tight">
-                  {publication.title}
-                </h3>
-                <p class="text-gray-600 font-medium mb-2">{publication.journal}</p>
-                {publication.authors && (
-                  <p class="text-sm text-gray-500 mb-3">
-                    <span class="font-medium">Authors:</span> {publication.authors}
-                  </p>
-                )}
-                <div class="flex gap-2 flex-wrap">
-                  {publication.link && (
-                    <a
-                      href={publication.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="inline-flex items-center px-3 py-1 bg-navy-800 text-white text-sm rounded hover:bg-navy-900 transition-colors"
-                    >
-                      Read Paper
-                    </a>
-                  )}
-                  {publication.doi && (
-                    <a
-                      href={`https://doi.org/${publication.doi}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="inline-flex items-center px-3 py-1 border border-navy-600 text-navy-600 text-sm rounded hover:bg-navy-50 transition-colors"
-                    >
-                      DOI
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </details>
         </div>
 
         <!-- Preprints -->
-        <div class="mb-16">
-          <h2 class="text-3xl font-bold text-navy-800 mb-8 font-serif">Preprints</h2>
-          <div class="grid grid-cols-1 gap-6">
-            {preprintPublications.map((publication) => (
-              <div class="bg-white p-6 border border-gray-200 border-l-4 border-l-gold-500">
-                <div class="flex justify-between items-start mb-3">
-                  <span class="px-3 py-1 text-sm font-medium bg-yellow-50 text-yellow-800">
-                    {publication.type}
-                  </span>
-                  <span class="text-sm font-medium text-gray-500">{publication.year}</span>
+        <div class="mb-8" id="preprints">
+          <details open>
+            <summary class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-4 cursor-pointer list-none flex justify-between items-center">
+              Preprints
+              <span class="text-sm font-normal text-gray-400">{preprintPublications.length} papers</span>
+            </summary>
+            <div class="divide-y divide-gray-100">
+              {preprintPublications.map((pub) => (
+                <div class="py-3 flex gap-4 items-baseline">
+                  <span class="text-xs text-gray-400 font-mono shrink-0 w-8">{pub.year}</span>
+                  <div class="min-w-0">
+                    {pub.link
+                      ? <a href={pub.link} target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-navy-800 hover:underline leading-snug">{pub.title}</a>
+                      : <span class="text-sm font-medium text-navy-800 leading-snug">{pub.title}</span>
+                    }
+                    <p class="text-xs text-gray-500 mt-0.5 leading-snug">{pub.authors}</p>
+                    <p class="text-xs text-gray-600 mt-0.5">
+                      <span class="italic">{pub.journal}</span>
+                      {pub.doi && (
+                        <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="ml-2 text-navy-600 hover:underline not-italic">DOI</a>
+                      )}
+                    </p>
+                  </div>
                 </div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-tight">
-                  {publication.title}
-                </h3>
-                <p class="text-gray-600 font-medium mb-2">{publication.journal}</p>
-                {publication.authors && (
-                  <p class="text-sm text-gray-500 mb-3">
-                    <span class="font-medium">Authors:</span> {publication.authors}
-                  </p>
-                )}
-                <div class="flex gap-2 flex-wrap">
-                  {publication.link && (
-                    <a
-                      href={publication.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="inline-flex items-center px-3 py-1 bg-navy-800 text-white text-sm rounded hover:bg-navy-900 transition-colors"
-                    >
-                      Read Paper
-                    </a>
-                  )}
-                  {publication.doi && (
-                    <a
-                      href={`https://doi.org/${publication.doi}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="inline-flex items-center px-3 py-1 border border-navy-600 text-navy-600 text-sm rounded hover:bg-navy-50 transition-colors"
-                    >
-                      DOI
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </details>
         </div>
 
         <!-- Conference Publications -->
-        <div class="mb-16">
-          <h2 class="text-3xl font-bold text-navy-800 mb-8 font-serif">Conference Publications</h2>
-          <div class="grid grid-cols-1 gap-6">
-            {conferencePublications.map((publication) => (
-              <div class="bg-white p-6 border border-gray-200 border-l-4 border-l-navy-600">
-                <div class="flex justify-between items-start mb-3">
-                  <span class="px-3 py-1 text-sm font-medium bg-navy-100 text-navy-800">
-                    {publication.type}
-                  </span>
-                  <span class="text-sm font-medium text-gray-500">{publication.year}</span>
+        <div class="mb-8" id="conferences">
+          <details open>
+            <summary class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-4 cursor-pointer list-none flex justify-between items-center">
+              Conference Publications
+              <span class="text-sm font-normal text-gray-400">{conferencePublications.length} papers</span>
+            </summary>
+            <div class="divide-y divide-gray-100">
+              {conferencePublications.map((pub) => (
+                <div class="py-3 flex gap-4 items-baseline">
+                  <span class="text-xs text-gray-400 font-mono shrink-0 w-8">{pub.year}</span>
+                  <div class="min-w-0">
+                    {pub.link
+                      ? <a href={pub.link} target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-navy-800 hover:underline leading-snug">{pub.title}</a>
+                      : <span class="text-sm font-medium text-navy-800 leading-snug">{pub.title}</span>
+                    }
+                    <p class="text-xs text-gray-500 mt-0.5 leading-snug">{pub.authors}</p>
+                    <p class="text-xs text-gray-600 mt-0.5">
+                      <span class="italic">{pub.journal}</span>
+                      {pub.doi && (
+                        <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="ml-2 text-navy-600 hover:underline not-italic">DOI</a>
+                      )}
+                    </p>
+                  </div>
                 </div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2 leading-tight">
-                  {publication.title}
-                </h3>
-                <p class="text-gray-600 font-medium mb-2">{publication.journal}</p>
-                {publication.authors && (
-                  <p class="text-sm text-gray-500 mb-3">
-                    <span class="font-medium">Authors:</span> {publication.authors}
-                  </p>
-                )}
-                <div class="flex gap-2 flex-wrap">
-                  {publication.link && (
-                    <a
-                      href={publication.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="inline-flex items-center px-3 py-1 bg-navy-800 text-white text-sm rounded hover:bg-navy-900 transition-colors"
-                    >
-                      Read Paper
-                    </a>
-                  )}
-                  {publication.doi && (
-                    <a
-                      href={`https://doi.org/${publication.doi}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="inline-flex items-center px-3 py-1 border border-navy-600 text-navy-600 text-sm rounded hover:bg-navy-50 transition-colors"
-                    >
-                      DOI
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}}
-          </div>
+              ))}
+            </div>
+          </details>
         </div>
 
-        <!-- Research Focus Areas -->
-        <div class="bg-navy-50 p-8 rounded">
-          <h2 class="text-2xl font-semibold text-navy-800 mb-6 text-center font-serif">
-            Research Focus Areas
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="bg-white p-4 rounded-lg text-center">
-              <h3 class="font-semibold text-gray-800 mb-2">Rehabilitation Technologies</h3>
-              <p class="text-sm text-gray-600">Robotic systems and sensor-based tools</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg text-center">
-              <h3 class="font-semibold text-gray-800 mb-2">Movement Analysis</h3>
-              <p class="text-sm text-gray-600">Quantitative assessment methods</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg text-center">
-              <h3 class="font-semibold text-gray-800 mb-2">Signal Processing</h3>
-              <p class="text-sm text-gray-600">EMG and sensor data analysis</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg text-center">
-              <h3 class="font-semibold text-gray-800 mb-2">Bioengineering</h3>
-              <p class="text-sm text-gray-600">Medical device development</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg text-center">
-              <h3 class="font-semibold text-gray-800 mb-2">Neurorehabilitation</h3>
-              <p class="text-sm text-gray-600">Clinical applications and therapy</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg text-center">
-              <h3 class="font-semibold text-gray-800 mb-2">Open Science</h3>
-              <p class="text-sm text-gray-600">Open-source tools and frameworks</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 

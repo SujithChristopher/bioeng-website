@@ -7,11 +7,7 @@ const faculty = [
   {
     name: "Dr. Sivakumar Balasubramanian",
     title: "Professor and Head",
-    education: [
-      "B.Tech in Electronics and Communication Engg., Pondicherry Engg. College",
-      "M.Tech in Biomedical Engineering, Indian Institute of Technology Bombay",
-      "Ph.D in Bioengineering, Arizona State University, Tempe"
-    ],
+    expertise: ["Neurorehabilitation Engineering", "Neuromechanics", "Quantitative Movement Analysis", "Precision Neurorehabiliation"],
     email: "siva82kb@cmcvellore.ac.in",
     url: "http://siva82kb.github.io",
     image: "/team-photos/siva.jpg"
@@ -19,258 +15,256 @@ const faculty = [
   {
     name: "Dr. Cassandra Solomons",
     title: "Assistant Professor G-II",
-    education: [
-      "B.E. in Biomedical Instrumentation Engineering, Avinashilingam Deemed University, Coimbatore",
-      "M.Sc. in Biomedical Engineering, University of Surrey, Guildford, Surrey, UK",
-      "M.S. in Bioengineering, CMC Vellore",
-      "Ph.D., VIT Vellore"
-    ],
+    expertise: ["FES", "Biomedical Instrumentation", "Signal Processing"],
     email: "",
+    url: "",
     image: "/team-photos/cassandra.jpg"
   },
   {
     name: "Dr. Rajdeep Ojha",
     title: "Professor",
-    education: [],
+    expertise: [],
     email: "",
+    url: "",
     image: "/team-photos/rajdeep.jpg"
   },
 ];
 
 const postdocs = [
-  { name: "Dr. Monisha Yuvaraj", title: "Post-Doc" },
-  { name: "Dr. Ritwika Choudhuri", title: "Post-Doc" },
+  { name: "Dr. Monisha Yuvaraj", title: "Post-Doc", image: "/team-photos/monisha.jpeg", url: "" },
+  { name: "Dr. Ritwika Choudhuri", title: "Post-Doc", image: "/team-photos/ritwika.jpg", url: "" },
 ];
 
 const phdStudents = [
-  { name: "Arjun Ram", title: "PhD Scholar" },
-  { name: "Parvathy Neelakandan", title: "PhD Scholar" },
-  { name: "Neelakshi Ganguly", title: "PhD Scholar" },
-  { name: "Charles Jebaraj", title: "PhD Scholar" },
-  { name: "Pooja Vinayagamoorthy", title: "PhD Scholar" },
-  { name: "Diwakar Reddy", title: "PhD Scholar" },
-  { name: "Aaruni Jha", title: "PhD Scholar" },
-  { name: "Harshene H", title: "PhD Scholar" },
+  { name: "Arjun Ram", title: "PhD Scholar", image: "/team-photos/arjun.jpg", url: "" },
+  { name: "Parvathy Neelakandan", title: "PhD Scholar", image: "/team-photos/parvathy.jpeg", url: "" },
+  { name: "Neelakshi Ganguly", title: "PhD Scholar", image: "/team-photos/neelakshi.png", url: "" },
+  { name: "Charles Jebaraj", title: "PhD Scholar", image: "/team-photos/charles_j.jpg", url: "" },
+  { name: "Pooja Vinayagamoorthy", title: "PhD Scholar", image: "/team-photos/pooja.png", url: "" },
+  { name: "Diwakar Reddy", title: "PhD Scholar", image: "/team-photos/diwakar.jpg", url: "" },
+  { name: "Aaruni Jha", title: "PhD Scholar", image: "", url: "" },
+  { name: "Harshene H", title: "PhD Scholar", image: "", url: "" },
 ];
 
 const projectStaff = [
-  { name: "Thiagu S", title: "Research Scientist" },
-  { name: "Sriramachandran V", title: "Research Scientist" },
-  { name: "Sujith Christopher", title: "Research Scientist" },
-  { name: "Jayasurya R", title: "Research Scientist" },
-  { name: "Gokul Raj E", title: "Research Scientist" },
-  { name: "Lishwanth R K", title: "Research Scientist" },
-  { name: "D. Steffi Graff", title: "Research Scientist (PT)" },
-  { name: "Dheephiga K.R.", title: "Research Scientist (PT)" },
-  { name: "Sivasakthi Nayaki G", title: "Research Scientist (PT)" },
-  { name: "Poornima R", title: "JRF" },
-  { name: "Anirudh George", title: "SRF" },
-  { name: "Krishnapriya M", title: "JRF" },
-  { name: "Gajendiran E", title: "JRF" },
-  { name: "Pravin Kumar S", title: "JRF" },
-  { name: "Susindhar Sundar", title: "Project Associate" },
+  { name: "Thiagu S", title: "Research Scientist", image: "/team-photos/thiagu.jpg", url: "" },
+  { name: "Sriramachandran V", title: "Research Scientist", image: "/team-photos/rama.JPG", url: "" },
+  { name: "Sujith Christopher", title: "Research Scientist", image: "/team-photos/sujithc.jpg", url: "" },
+  { name: "Jayasurya R", title: "Research Scientist", image: "/team-photos/jayasurya.jpg", url: "" },
+  { name: "Gokul Raj E", title: "Research Scientist", image: "/team-photos/gokul.jpg", url: "" },
+  { name: "Lishwanth R K", title: "Research Scientist", image: "/team-photos/lishwanth.jpeg", url: "" },
+  { name: "D. Steffi Graff", title: "Research Scientist (PT)", image: "", url: "" },
+  { name: "Dheephiga K.R.", title: "Research Scientist (PT)", image: "", url: "" },
+  { name: "Sivasakthi Nayaki G", title: "Research Scientist (PT)", image: "", url: "" },
+  { name: "Poornima R", title: "JRF", image: "", url: "" },
+  { name: "Anirudh George", title: "SRF", image: "", url: "" },
+  { name: "Krishnapriya M", title: "JRF", image: "", url: "" },
+  { name: "Gajendiran E", title: "JRF", image: "", url: "" },
+  { name: "Pravin Kumar S", title: "JRF", image: "", url: "" },
+  { name: "Susindhar Sundar", title: "Project Associate", image: "", url: "" },
 ];
 
 const masterStudents2ndYear = [
-  { name: "Kabilan V", title: "MS Student" },
-  { name: "Vaideesh Ragavan", title: "MS Student" },
-  { name: "Lavanya Varshini M R", title: "MS Student" },
-  { name: "Minusha S", title: "MS Student" },
-  { name: "Johanna Afreena", title: "MS Student" },
+  { name: "Kabilan V", title: "MS Student", image: "/team-photos/kabilan.jpg", url: "" },
+  { name: "Vaideesh Ragavan", title: "MS Student", image: "/team-photos/vaideesh.jpg", url: "" },
+  { name: "Lavanya Varshini M R", title: "MS Student", image: "/team-photos/lavanya.jpg", url: "" },
+  { name: "Minusha S", title: "MS Student", image: "/team-photos/minusha.jpg", url: "" },
+  { name: "Johanna Afreena", title: "MS Student", image: "/team-photos/johanna.jpg", url: "" },
 ];
 
 const masterStudents1stYear = [
-  { name: "Adarsh Moses", title: "MS Student" },
-  { name: "Cressida Sheena Priscillia I", title: "MS Student" },
-  { name: "Jerome D Immanuel Victor", title: "MS Student" },
+  { name: "Adarsh Moses", title: "MS Student", image: "/team-photos/adarsh.jpeg", url: "" },
+  { name: "Cressida Sheena Priscillia I", title: "MS Student", image: "/team-photos/cressida.jpeg", url: "" },
+  { name: "Jerome D Immanuel Victor", title: "MS Student", image: "/team-photos/jerome.jpeg", url: "" },
 ];
 
 const administrative = [
-  { name: "Lalitha C.", title: "Secretary G-I" },
-  { name: "Clinton N", title: "Engineer G-IV" },
-  { name: "Kathiravan", title: "Attendant" },
+  { name: "Lalitha C.", title: "Secretary G-I", image: "", url: "" },
+  { name: "Clinton N", title: "Engineer G-IV", image: "", url: "" },
+  { name: "Kathiravan", title: "Attendant", image: "", url: "" },
 ];
+
+function initials(name: string) {
+  return name.replace(/^Dr\.\s*/, '').split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+}
 ---
 
-<Layout title="Team - BioRehab Group">
+<Layout title="Team - Department of Bioengineering, CMC Vellore">
   <div class="min-h-screen bg-white">
     <Header />
 
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h1 class="text-4xl md:text-5xl font-bold text-navy-800 mb-4 font-serif">
-            Our Team
-          </h1>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Meet the dedicated researchers, engineers, and students working together
-            to advance neurorehabilitation technology
-          </p>
+    <!-- Page Header -->
+    <section class="py-12 bg-navy-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 font-serif">Our Team</h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Faculty, researchers, and students at the Department of Bioengineering, CMC Vellore
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Jump links -->
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mb-10 text-sm border-b border-gray-200 pb-4">
+          <a href="#faculty" class="text-navy-600 hover:underline">Faculty ({faculty.length})</a>
+          <span class="text-gray-300">·</span>
+          <a href="#postdocs" class="text-navy-600 hover:underline">Post-Docs ({postdocs.length})</a>
+          <span class="text-gray-300">·</span>
+          <a href="#phd" class="text-navy-600 hover:underline">PhD Scholars ({phdStudents.length})</a>
+          <span class="text-gray-300">·</span>
+          <a href="#masters" class="text-navy-600 hover:underline">Master Students ({masterStudents1stYear.length + masterStudents2ndYear.length})</a>
+          <span class="text-gray-300">·</span>
+          <a href="#staff" class="text-navy-600 hover:underline">Project Staff ({projectStaff.length})</a>
+          <span class="text-gray-300">·</span>
+          <a href="#admin" class="text-navy-600 hover:underline">Administrative ({administrative.length})</a>
         </div>
 
         <!-- Faculty -->
-        <div class="mb-16">
-          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-6 text-center">Faculty</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="mb-10" id="faculty">
+          <h2 class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-6">Faculty</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {faculty.map((member) => (
-                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden">
-                  <div class="aspect-square relative bg-gray-100 flex items-center justify-center h-48 w-48 mx-auto">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      class="object-contain p-2 w-full h-full"
-                    />
-                  </div>
-                  <div class="p-4">
-                    <h3 class="font-semibold text-navy-800 mb-1 text-lg font-serif">{member.name}</h3>
-                    {member.title && <p class="text-navy-600 font-medium mb-2 text-base">{member.title}</p>}
-                    {member.education && member.education.length > 0 && (
-                      <div class="mb-3">
-                        <p class="text-sm font-medium text-gray-800 mb-1">Education:</p>
-                        <ul class="text-sm text-gray-600 space-y-1">
-                          {member.education.map((edu) => (
-                            <li>• {edu}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                    <div class="space-y-1">
-                      {member.email && (
-                        <a
-                          href={`mailto:${member.email}`}
-                          class="text-sm text-navy-600 hover:text-navy-800 block break-all"
-                        >
-                          {member.email}
-                        </a>
-                      )}
-                      {member.url && (
-                        <a
-                          href={member.url.startsWith('http') ? member.url : `https://${member.url}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          class="text-sm text-navy-600 hover:text-navy-800 block break-all"
-                        >
-                          {member.url}
-                        </a>
-                      )}
+              <div class="border border-gray-200 rounded overflow-hidden">
+                <div class="bg-gray-100 h-48 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="font-bold text-navy-800 font-serif text-base leading-tight">{member.name}</h3>
+                  <p class="text-xs text-gray-500 mt-0.5 mb-3">{member.title}</p>
+                  {member.expertise.length > 0 && (
+                    <div class="flex flex-wrap gap-1 mb-3">
+                      {member.expertise.map((tag) => (
+                        <span class="px-2 py-0.5 bg-navy-50 text-navy-700 text-xs rounded">{tag}</span>
+                      ))}
                     </div>
+                  )}
+                  <div class="flex flex-wrap gap-x-3 gap-y-0.5">
+                    {member.email && (
+                      <a href={`mailto:${member.email}`} class="text-xs text-navy-600 hover:underline">Email</a>
+                    )}
+                    {member.url && (
+                      <a href={member.url.startsWith('http') ? member.url : `https://${member.url}`} target="_blank" rel="noopener noreferrer" class="text-xs text-navy-600 hover:underline">Personal page</a>
+                    )}
                   </div>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
         </div>
 
         <!-- Post-Docs -->
-        <div class="mb-12">
-          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-4 text-center">Post-Docs</h2>
-          <div class="max-w-2xl mx-auto">
-            <ul class="divide-y divide-gray-100">
-              {postdocs.map((m) => (
-                <li class="flex justify-between items-center py-2.5">
-                  <span class="text-gray-800 font-medium">{m.name}</span>
-                  <span class="text-sm text-gray-500">{m.title}</span>
-                </li>
-              ))}
-            </ul>
+        <div class="mb-10" id="postdocs">
+          <h2 class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-4">Post-Docs</h2>
+          <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-3">
+            {postdocs.map((m) => (
+              <a href={m.url || undefined} target={m.url ? "_blank" : undefined} rel="noopener noreferrer" class={`text-center group ${!m.url ? 'pointer-events-none' : ''}`}>
+                <div class="w-full aspect-square bg-navy-100 rounded overflow-hidden mb-1 flex items-center justify-center">
+                  {m.image
+                    ? <img src={m.image} alt={m.name} class="w-full h-full object-cover" />
+                    : <span class="text-navy-700 font-semibold text-sm">{initials(m.name)}</span>
+                  }
+                </div>
+                <p class="text-xs text-gray-800 leading-tight group-hover:text-navy-600 line-clamp-2">{m.name}</p>
+              </a>
+            ))}
           </div>
         </div>
 
         <!-- PhD Scholars -->
-        <div class="mb-12">
-          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-4 text-center">PhD Scholars</h2>
-          <div class="max-w-2xl mx-auto">
-            <ul class="divide-y divide-gray-100">
-              {phdStudents.map((m) => (
-                <li class="flex justify-between items-center py-2.5">
-                  <span class="text-gray-800 font-medium">{m.name}</span>
-                  <span class="text-sm text-gray-500">{m.title}</span>
-                </li>
-              ))}
-            </ul>
+        <div class="mb-10" id="phd">
+          <h2 class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-4">PhD Scholars</h2>
+          <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-3">
+            {phdStudents.map((m) => (
+              <a href={m.url || undefined} target={m.url ? "_blank" : undefined} rel="noopener noreferrer" class={`text-center group ${!m.url ? 'pointer-events-none' : ''}`}>
+                <div class="w-full aspect-square bg-navy-100 rounded overflow-hidden mb-1 flex items-center justify-center">
+                  {m.image
+                    ? <img src={m.image} alt={m.name} class="w-full h-full object-cover" />
+                    : <span class="text-navy-700 font-semibold text-sm">{initials(m.name)}</span>
+                  }
+                </div>
+                <p class="text-xs text-gray-800 leading-tight group-hover:text-navy-600 line-clamp-2">{m.name}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Master Students -->
+        <div class="mb-10" id="masters">
+          <h2 class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-4">Master Students</h2>
+          <p class="text-xs text-gray-500 mb-3">2nd Year</p>
+          <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-3 mb-6">
+            {masterStudents2ndYear.map((m) => (
+              <a href={m.url || undefined} target={m.url ? "_blank" : undefined} rel="noopener noreferrer" class={`text-center group ${!m.url ? 'pointer-events-none' : ''}`}>
+                <div class="w-full aspect-square bg-navy-100 rounded overflow-hidden mb-1 flex items-center justify-center">
+                  {m.image
+                    ? <img src={m.image} alt={m.name} class="w-full h-full object-cover" />
+                    : <span class="text-navy-700 font-semibold text-sm">{initials(m.name)}</span>
+                  }
+                </div>
+                <p class="text-xs text-gray-800 leading-tight group-hover:text-navy-600 line-clamp-2">{m.name}</p>
+              </a>
+            ))}
+          </div>
+          <p class="text-xs text-gray-500 mb-3">1st Year</p>
+          <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-3">
+            {masterStudents1stYear.map((m) => (
+              <a href={m.url || undefined} target={m.url ? "_blank" : undefined} rel="noopener noreferrer" class={`text-center group ${!m.url ? 'pointer-events-none' : ''}`}>
+                <div class="w-full aspect-square bg-navy-100 rounded overflow-hidden mb-1 flex items-center justify-center">
+                  {m.image
+                    ? <img src={m.image} alt={m.name} class="w-full h-full object-cover" />
+                    : <span class="text-navy-700 font-semibold text-sm">{initials(m.name)}</span>
+                  }
+                </div>
+                <p class="text-xs text-gray-800 leading-tight group-hover:text-navy-600 line-clamp-2">{m.name}</p>
+              </a>
+            ))}
           </div>
         </div>
 
         <!-- Project Staff -->
-        <div class="mb-12">
-          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-4 text-center">Project Staff</h2>
-          <div class="max-w-2xl mx-auto">
-            <ul class="divide-y divide-gray-100">
-              {projectStaff.map((m) => (
-                <li class="flex justify-between items-center py-2.5">
-                  <span class="text-gray-800 font-medium">{m.name}</span>
-                  <span class="text-sm text-gray-500">{m.title}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <!-- Master Students 2nd Year -->
-        <div class="mb-12">
-          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-4 text-center">Master Students <span class="text-lg font-sans text-gray-500">(2nd Year)</span></h2>
-          <div class="max-w-2xl mx-auto">
-            <ul class="divide-y divide-gray-100">
-              {masterStudents2ndYear.map((m) => (
-                <li class="flex justify-between items-center py-2.5">
-                  <span class="text-gray-800 font-medium">{m.name}</span>
-                  <span class="text-sm text-gray-500">{m.title}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <!-- Master Students 1st Year -->
-        <div class="mb-12">
-          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-4 text-center">Master Students <span class="text-lg font-sans text-gray-500">(1st Year)</span></h2>
-          <div class="max-w-2xl mx-auto">
-            <ul class="divide-y divide-gray-100">
-              {masterStudents1stYear.map((m) => (
-                <li class="flex justify-between items-center py-2.5">
-                  <span class="text-gray-800 font-medium">{m.name}</span>
-                  <span class="text-sm text-gray-500">{m.title}</span>
-                </li>
-              ))}
-            </ul>
+        <div class="mb-10" id="staff">
+          <h2 class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-4">Project Staff</h2>
+          <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-3">
+            {projectStaff.map((m) => (
+              <a href={m.url || undefined} target={m.url ? "_blank" : undefined} rel="noopener noreferrer" class={`text-center group ${!m.url ? 'pointer-events-none' : ''}`}>
+                <div class="w-full aspect-square bg-navy-100 rounded overflow-hidden mb-1 flex items-center justify-center">
+                  {m.image
+                    ? <img src={m.image} alt={m.name} class="w-full h-full object-cover" />
+                    : <span class="text-navy-700 font-semibold text-sm">{initials(m.name)}</span>
+                  }
+                </div>
+                <p class="text-xs text-gray-800 leading-tight group-hover:text-navy-600 line-clamp-2">{m.name}</p>
+                <p class="text-xs text-gray-400 leading-tight">{m.title}</p>
+              </a>
+            ))}
           </div>
         </div>
 
         <!-- Administrative Staff -->
-        <div class="mb-16">
-          <h2 class="text-2xl font-serif text-navy-800 border-b border-gray-200 pb-2 mb-4 text-center">Administrative Staff</h2>
-          <div class="max-w-2xl mx-auto">
-            <ul class="divide-y divide-gray-100">
-              {administrative.map((m) => (
-                <li class="flex justify-between items-center py-2.5">
-                  <span class="text-gray-800 font-medium">{m.name}</span>
-                  <span class="text-sm text-gray-500">{m.title}</span>
-                </li>
-              ))}
-            </ul>
+        <div class="mb-10" id="admin">
+          <h2 class="text-xl font-bold text-navy-800 font-serif border-b border-gray-200 pb-2 mb-4">Administrative Staff</h2>
+          <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-3">
+            {administrative.map((m) => (
+              <a href={m.url || undefined} target={m.url ? "_blank" : undefined} rel="noopener noreferrer" class={`text-center group ${!m.url ? 'pointer-events-none' : ''}`}>
+                <div class="w-full aspect-square bg-navy-100 rounded overflow-hidden mb-1 flex items-center justify-center">
+                  {m.image
+                    ? <img src={m.image} alt={m.name} class="w-full h-full object-cover" />
+                    : <span class="text-navy-700 font-semibold text-sm">{initials(m.name)}</span>
+                  }
+                </div>
+                <p class="text-xs text-gray-800 leading-tight group-hover:text-navy-600 line-clamp-2">{m.name}</p>
+                <p class="text-xs text-gray-400 leading-tight">{m.title}</p>
+              </a>
+            ))}
           </div>
         </div>
 
-        <!-- Join Us Section -->
-        <div class="bg-navy-900 text-white p-8 rounded text-center">
-          <h2 class="text-2xl font-semibold mb-4 font-serif">Join Our Team</h2>
-          <p class="text-lg mb-6 text-gray-300">
-            We are always looking for motivated individuals to join our research community
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="text-center">
-              <h3 class="font-semibold mb-2 font-serif">MS/PhD Students</h3>
-              <p class="text-gray-400">Research opportunities available</p>
-            </div>
-            <div class="text-center">
-              <h3 class="font-semibold mb-2 font-serif">Internships</h3>
-              <p class="text-gray-400">Hands-on research experience</p>
-            </div>
-            <div class="text-center">
-              <h3 class="font-semibold mb-2 font-serif">Project Staff</h3>
-              <p class="text-gray-400">Full-time research positions</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
