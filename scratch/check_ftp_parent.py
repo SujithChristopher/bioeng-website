@@ -4,6 +4,8 @@ from utils import get_ftp_config
 config = get_ftp_config()
 FTP_HOST = config["host"]
 FTP_USER = config["user"]
+FTP_PASS = config["pass"]
+
 
 def check_parent():
     try:
