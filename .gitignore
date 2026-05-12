@@ -33,3 +33,4 @@ Thumbs.db
 *.temp
 /.playwright-mcp/
 /.claude/
+/backup_site/
