@@ -37,12 +37,6 @@ const faculty = [
 
 const postdocs = [
   {
-    name: "Dr. Monisha Yuvaraj",
-    title: "Post-Doc",
-    image: "/team-photos/monisha.jpeg",
-    url: "https://sites.google.com/view/monisha-yuvaraj/home",
-  },
-  {
     name: "Dr. Ritwika Choudhuri",
     title: "Post-Doc",
     image: "/team-photos/ritwika.jpg",
@@ -96,7 +90,7 @@ const projectStaff = [
   {
     name: "Dheephiga K R",
     title: "Research Scientist (PT)",
-    image: "",
+    image: "/team-photos/dheepiga.jpeg",
     url: "",
   },
   { name: "Gajendiran E", title: "JRF", image: "", url: "" },
@@ -119,14 +113,7 @@ const projectStaff = [
     image: "/team-photos/lishwanth.jpeg",
     url: "https://www.linkedin.com/in/lishwanthrk17",
   },
-  { name: "Poornima R", title: "JRF", image: "", url: "" },
   { name: "Pravin Kumar S", title: "JRF", image: "", url: "" },
-  {
-    name: "Sivasakthi Nayaki G",
-    title: "Research Scientist (PT)",
-    image: "",
-    url: "",
-  },
   {
     name: "Sriramachandran V",
     title: "Research Scientist",
@@ -135,8 +122,8 @@ const projectStaff = [
   },
   {
     name: "Steffi Graff",
-    title: "Research Scientist (PT)",
-    image: "",
+    title: "Project Research Scientist",
+    image: "/team-photos/steffi.jpeg",
     url: "",
   },
   {
@@ -155,39 +142,6 @@ const projectStaff = [
 ];
 
 const masterStudents2ndYear = [
-  {
-    name: "Johanna Afreena",
-    title: "MS Student",
-    image: "/team-photos/johanna.jpg",
-    url: "",
-  },
-  {
-    name: "Kabilan V",
-    title: "MS Student",
-    image: "/team-photos/kabilan.jpg",
-    url: "",
-  },
-  {
-    name: "Lavanya Varshini M R",
-    title: "MS Student",
-    image: "/team-photos/lavanya.jpg",
-    url: "",
-  },
-  {
-    name: "Minusha S",
-    title: "MS Student",
-    image: "/team-photos/minusha.jpg",
-    url: "",
-  },
-  {
-    name: "Vaideesh Ragavan",
-    title: "MS Student",
-    image: "/team-photos/vaideesh.jpg",
-    url: "",
-  },
-];
-
-const masterStudents1stYear = [
   {
     name: "Adarsh Moses",
     title: "MS Student",
@@ -260,7 +214,7 @@ function initials(name: string) {
           <span class="text-gray-300">·</span>
           <a href="#masters" class="text-navy-600 hover:underline"
             >Master Students ({
-              masterStudents1stYear.length + masterStudents2ndYear.length
+              masterStudents2ndYear.length
             })</a
           >
           <span class="text-gray-300">·</span>
@@ -422,41 +376,9 @@ function initials(name: string) {
             Master Students
           </h2>
           <p class="text-xs text-gray-500 mb-3">2nd Year</p>
-          <div
-            class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-3 mb-6"
-          >
-            {
-              masterStudents2ndYear.map((m) => (
-                <a
-                  href={m.url || undefined}
-                  target={m.url ? "_blank" : undefined}
-                  rel="noopener noreferrer"
-                  class={`text-center group ${!m.url ? "pointer-events-none" : ""}`}
-                >
-                  <div class="w-full aspect-square bg-navy-100 rounded overflow-hidden mb-1 flex items-center justify-center">
-                    {m.image ? (
-                      <img
-                        src={m.image}
-                        alt={m.name}
-                        class="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <span class="text-navy-700 font-semibold text-sm">
-                        {initials(m.name)}
-                      </span>
-                    )}
-                  </div>
-                  <p class="text-xs text-gray-800 leading-tight group-hover:text-navy-600 line-clamp-2">
-                    {m.name}
-                  </p>
-                </a>
-              ))
-            }
-          </div>
-          <p class="text-xs text-gray-500 mb-3">1st Year</p>
           <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-3">
             {
-              masterStudents1stYear.map((m) => (
+              masterStudents2ndYear.map((m) => (
                 <a
                   href={m.url || undefined}
                   target={m.url ? "_blank" : undefined}
