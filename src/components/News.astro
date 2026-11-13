@@ -1,30 +1,8 @@
 ---
-const newsItems = [
-  {
-    title: "PLUTO - A Portable Plug-and-Play Robot",
-    description:
-      "Our research team has developed PLUTO, a portable plug-and-play robot. PLUTO provides targeted therapy for wrist and hand movement using a single actuator and a set of interchangeable mechanical handles.",
-    image: "/news/pluto_news1.png",
-  },
-  {
-    title: "Research Day 2024",
-    description:
-      "BioRehab Group participated in the annual research day, showcasing our latest developments in neurorehabilitation technologies and collaborative research initiatives.",
-    image: "/news/pluto_news2.png",
-  },
-  {
-    title: "R2 Robotic Rehabilitation System",
-    description:
-      "Introduction of our new R2 robotic system designed for upper limb rehabilitation, featuring advanced control algorithms and adaptive therapy protocols.",
-    image: "/news/pluto_news3.png",
-  },
-  {
-    title: "NOARK: Not Just an Arm Skateboard",
-    description:
-      "Introducing NOARK — a portable, gamified arm skateboard designed for upper-limb rehabilitation, making therapy engaging and accessible for patients.",
-    image: "/news/noark_news.jpg",
-  },
-];
+import { newsItems as allNews } from '../data/news';
+
+// Carousel needs an image
+const newsItems = allNews.filter((n) => n.image);
 ---
 
 <section class="py-16 bg-navy-50">
@@ -58,7 +36,7 @@ const newsItems = [
                     </div>
                     <div class="md:w-1/2 p-8">
                       <p class="text-navy-600 text-sm font-medium mb-3">
-                        Recent News
+                        {item.date ?? "Recent News"}
                       </p>
                       <h3 class="text-2xl font-bold text-navy-800 mb-4 font-serif">
                         {item.title}
